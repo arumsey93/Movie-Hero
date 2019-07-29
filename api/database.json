@@ -8,21 +8,22 @@
     }
   ],
   "heroes": [
-    {}
+    {
+      "name": "Alex",
+      "desc": "The best programmer in c33.",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "name": "Danny",
+      "desc": "Another great programmer.",
+      "userId": 1,
+      "id": 2
+    }
   ],
-  "adventures": [
-    {}
-  ],
-  "bag": [
-    {}
-  ],
-  "weapons": [
-    {}
-  ],
-  "defense": [
-    {}
-  ],
-  "utility": [
-    {}
-  ]
+  "adventures": [],
+  "bag": [],
+  "weapons": [],
+  "defense": [],
+  "utility": []
 }
