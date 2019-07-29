@@ -17,7 +17,7 @@ export default class ViewHeroes extends Component {
                 <button type="button"
                     className="btn btn-success"
                     onClick={() => {
-                        this.props.history.push("/heroes/new")}
+                        this.props.history.push("/create")}
                     }>
                 Create Hero
                 </button>
