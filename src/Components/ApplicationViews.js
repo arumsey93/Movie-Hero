@@ -6,6 +6,8 @@ import Register from './register/register'
 import UserHandler from './APIManager/userhandler'
 import Dashboard from './Dashboard/Dashboard'
 import Create from './Create/Create'
+import createHandler from "./APIManager/createhandler";
+import ViewHeroes from "./ViewHeroes/View"
 
 class ApplicationViews extends Component {
     state = {
@@ -21,6 +23,8 @@ class ApplicationViews extends Component {
     componentDidMount() {
         UserHandler.getAll()
           .then(users => this.setState({ users: users }))
+        createHandler.getAll()
+            .then(heroes => this.setState({heroes: heroes}))
     };
 
     addUser = user =>
@@ -31,6 +35,14 @@ class ApplicationViews extends Component {
           users: users
         })
       );
+
+    addHero = hero => 
+    createHandler.post(hero)
+        .then(() => createHandler.getAll())
+        .then(heroes => 
+            this.setState({
+                heroes: heroes
+            }))
 
     isAuthenticated = () => sessionStorage.getItem("userId") !== null;
 
@@ -77,7 +89,23 @@ class ApplicationViews extends Component {
             render={props => {
                 if(this.isAuthenticated()) {
                     return (
-                        <Create {...props} />
+                        <Create {...props}
+                        addHero={this.addHero} />
+                    )
+                } else {
+                    return <Redirect to="/welcome" />
+                }
+            }}
+            />
+            <Route
+            exact
+            path="/heroes"
+            render={props => {
+                if(this.isAuthenticated()){
+                    return (
+                        <ViewHeroes {...props}
+                        heroes={this.state.heroes}
+                        />
                     )
                 } else {
                     return <Redirect to="/welcome" />

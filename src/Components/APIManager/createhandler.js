@@ -18,7 +18,7 @@ export default Object.create(ApiHandler, {
   },
   post: {
       value: function(newData){
-          return ApiHandler.post("heroes",newData)
+          return ApiHandler.post("heroes", newData)
       }
   },
   put: {
