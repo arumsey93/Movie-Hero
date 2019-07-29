@@ -1,37 +1,28 @@
 {
-    "users": [
-        {
-
-        }
-    ],
-    "heroes": [
-        {
-
-        }
-    ],
-    "adventures":[
-        {
-
-        }
-    ],
-    "bag": [
-        {
-
-        }
-    ],
-    "weapons": [
-        {
-
-        }
-    ],
-    "defense": [
-        {
-
-        }
-    ],
-    "utility": [
-        {
-            
-        }
-    ]
+  "users": [
+    {
+      "username": "Alex",
+      "password": "password",
+      "email": "alexrumsey1993@gmail.com",
+      "id": 1
+    }
+  ],
+  "heroes": [
+    {}
+  ],
+  "adventures": [
+    {}
+  ],
+  "bag": [
+    {}
+  ],
+  "weapons": [
+    {}
+  ],
+  "defense": [
+    {}
+  ],
+  "utility": [
+    {}
+  ]
 }
