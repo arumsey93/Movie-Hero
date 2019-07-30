@@ -55,6 +55,16 @@ class ApplicationViews extends Component {
         })
     }
 
+    deleteHero = hero => {
+        createHandler.delete(hero)
+        .then(() => createHandler.getAll())
+        .then(heroes => {
+            this.setState({
+                heroes: heroes
+            })
+        })
+    }
+
     isAuthenticated = () => sessionStorage.getItem("userId") !== null;
 
     render () {
@@ -116,6 +126,7 @@ class ApplicationViews extends Component {
                     return (
                         <ViewHeroes {...props}
                         heroes={this.state.heroes}
+                        deleteHero={this.deleteHero}
                         />
                     )
                 } else {

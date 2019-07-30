@@ -26,7 +26,7 @@ export default class HeroCard extends Component {
                             className="btn btn-danger"
                             onClick={
                                 () => {this.setState({ saveDisabled: true },
-                                // () => this.props.deleteArticle(article.id),
+                                () => this.props.deleteHero(this.props.hero.id),
                                 )
                             }
                         }
