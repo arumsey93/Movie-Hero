@@ -229,6 +229,9 @@ class ApplicationViews extends Component {
                         weapons={this.state.weapons}
                         defenses={this.state.defense}
                         utility={this.state.utility}
+                        updateWeapon={this.updateWeapon}
+                        updateDefense={this.updateDefense}
+                        updateUtility={this.updateUtility}
                         />
                     )
                 }

@@ -15,3 +15,8 @@
     display: flex;
     border-color: 1px solid black;
 }
+
+.itemBox {
+    display: flex;
+    justify-content: center
+}

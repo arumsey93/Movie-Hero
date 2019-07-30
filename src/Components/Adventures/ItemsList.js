@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import './Adventures.css'
-import WeaponCard from './WeaponCard'
-import DefenseCard from './DefenseCard'
-import UtilityCard from './UtilityCard'
 import weaponheandler from '../APIManager/weaponhandler'
 import defensehandler from '../APIManager/defensehandler'
 import utilityhandler from '../APIManager/utilityhandler'
@@ -11,14 +8,22 @@ export default class ItemsList extends Component {
     state = {
         weapon: "",
         defense: "",
-        utility: ""
+        utility: "",
+        showMenu: false
     }
 
     handleFieldChange = evt => {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
+        console.log(stateToChange)
     }
+
+    toggleMenu = () => {
+        this.setState({
+          showMenu: !this.state.showMenu
+        })
+      }
 
     updateItems = evt => {
         evt.preventDefault()
@@ -37,34 +42,63 @@ export default class ItemsList extends Component {
                 heroId: this.props.match.params.heroId,
                 adventureId: this.props.match.params.adventureId
             }
+
         }
     }
 
     render () {
+    const menuVis = this.state.showMenu ? 'show' : 'hide';
         return (
             <React.Fragment>
                 <section className="itemsList">
                     <h5>Weapons:</h5>
-                    <select className="weaponsSelect">
+                    <select 
+                    className="weaponsSelect"
+                    id="weapon"
+                    onChange={this.handleFieldChange}
+                    >
                     {
                     this.props.weapons.map(weapon => 
-                            <WeaponCard key={weapon.id} weapon={weapon} {...this.props} />
+                        <option 
+                        required 
+                        id={weapon.id}
+                        value={weapon.name}>
+                        {weapon.name}
+                        </option>
                         )
                     }
                     </select>
                     <h5>Defense:</h5>
-                    <select className="defenseSelect">
+                    <select 
+                    className="defenseSelect"
+                    id="defense"
+                    onChange={this.handleFieldChange}
+                    >
                     {
                     this.props.defenses.map(defense => 
-                            <DefenseCard key={defense.id} defense={defense} {...this.props} />
+                        <option 
+                        required
+                        id={defense.id}
+                        value={defense.name}>
+                        {defense.name}
+                        </option>
                         )
                     }
                     </select>
                     <h5>Utility:</h5>
-                    <select className="utilitySelect">
+                    <select 
+                    className="utilitySelect"
+                    id="utility"
+                    onChange={this.handleFieldChange}
+                    >
                     {
                     this.props.utility.map(ut => 
-                            <UtilityCard key={ut.id} ut={ut} {...this.props} />
+                        <option 
+                        required 
+                        id={ut.id}
+                        value={ut.name}>
+                        {ut.name}
+                        </option>
                         )
                     }
                     </select>
@@ -75,12 +109,8 @@ export default class ItemsList extends Component {
                             <button
                             type="button"
                             className="btn btn-success"
-                            // onClick={
-                            //     () => {
-                            //         this.
-                            //     }
-                            // }
-                            >Add Items
+                            onClick={this.toggleMenu}>
+                            Add Items
                             </button>
                         </div>
                     </div>
@@ -91,8 +121,10 @@ export default class ItemsList extends Component {
                             <h5 className="itemHeader">Item List:</h5>
                         </div>
                         <section className="itemBox">
-                            <div className="itemsDiv">
-
+                            <div className={`menu ${menuVis}`}>
+                                <p>{this.state.weapon}</p>
+                                <p>{this.state.defense}</p>
+                                <p>{this.state.utility}</p>
                             </div>
                         </section>
                     </div>
