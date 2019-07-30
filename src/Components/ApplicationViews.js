@@ -14,6 +14,7 @@ import adventurehandler from "./APIManager/adventurehandler";
 import weaponhandler from "./APIManager/weaponhandler"
 import defensehandler from "./APIManager/defensehandler"
 import utilityhandler from "./APIManager/utilityhandler"
+import ItemsList from "./Adventures/ItemsList"
 
 
 class ApplicationViews extends Component {
@@ -30,10 +31,16 @@ class ApplicationViews extends Component {
     componentDidMount() {
         UserHandler.getAll()
           .then(users => this.setState({ users: users }))
-        createHandler.getAll()
+            .then(() => createHandler.getAll())
             .then(heroes => this.setState({heroes: heroes}))
-        adventurehandler.getAll()
+            .then(() => adventurehandler.getAll())
             .then(adventures => this.setState({adventures: adventures}))
+            .then(() => weaponhandler.getAll())
+            .then(weapons => this.setState({weapons: weapons}))
+            .then(() => defensehandler.getAll())
+            .then(defense => this.setState({defense: defense}))
+            .then(() => utilityhandler.getAll())
+            .then(utility => this.setState({utility: utility}))
     };
 
     addUser = user =>
@@ -165,6 +172,21 @@ class ApplicationViews extends Component {
                     )
                 } else {
                     return <Redirect to="/welcome" />
+                }
+            }}
+            />
+            <Route
+            exact
+            path="/items"
+            render={props => {
+                if(this.isAuthenticated()) {
+                    return (
+                        <ItemsList {...props}
+                        weapons={this.state.weapons}
+                        defenses={this.state.defense}
+                        utility={this.state.utility}
+                        />
+                    )
                 }
             }}
             />
