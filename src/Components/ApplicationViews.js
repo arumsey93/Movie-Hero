@@ -11,6 +11,10 @@ import ViewHeroes from "./ViewHeroes/View"
 import EditHeroForm from "./ViewHeroes/EditHeroes"
 import AdventuresList from "./Adventures/Adventures";
 import adventurehandler from "./APIManager/adventurehandler";
+import weaponhandler from "./APIManager/weaponhandler"
+import defensehandler from "./APIManager/defensehandler"
+import utilityhandler from "./APIManager/utilityhandler"
+
 
 class ApplicationViews extends Component {
     state = {

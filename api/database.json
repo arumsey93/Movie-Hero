@@ -44,7 +44,7 @@
     {
       "name": "Megalodon",
       "description": "A giant shark is attacking your underwater science lab, your team may have inadvertently let it out.  Stop the shark, and save the innocent bystanders in its' path.",
-      "score": 2,
+      "score": 3,
       "key": "water",
       "id": 2
     },
@@ -65,7 +65,70 @@
 
   ],
   "bag": [],
-  "weapons": [],
-  "defense": [],
-  "utility": []
+  "weapons": [
+    {
+      "name": "Sword",
+      "id": 1,
+      "score": 1
+    },
+    {
+      "name": "Kung Fu Abilities",
+      "id": 2,
+      "score": 2
+    },
+    {
+      "name": "Gun",
+      "id": 3,
+      "score": 2
+    },
+    {
+      "name": "Spear Gun",
+      "id": 4,
+      "score": 1
+    }
+  ],
+  "defense": [
+    {
+      "name": "Shield",
+      "id": 1,
+      "score": 2
+    },
+    {
+      "name": "Taser",
+      "id": 2,
+      "score": 2
+    },
+    {
+      "name": "Pepper Spray",
+      "id": 3,
+      "score": 3
+    },
+    {
+      "name": "Puppy Dog Eyes",
+      "id": 4,
+      "score": 1
+    }
+  ],
+  "utility": [
+    {
+      "name": "Fire Extinguisher",
+      "id": 1,
+      "key": "fire"
+    },
+    {
+      "name": "Scuba Suit",
+      "id": 2,
+      "key": "water"
+    },
+    {
+      "name": "Cell Phone",
+      "id": 3,
+      "key": "phone"
+    },
+    {
+      "name": "Nike Running Shoes",
+      "id": 4,
+      "key": "cardio"
+    }
+  ]
 }
