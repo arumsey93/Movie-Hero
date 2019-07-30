@@ -8,8 +8,8 @@ export default class AdventuresList extends Component {
             <React.Fragment>
             <section className="adventures">
             {
-                this.props.adventures.map(adventure => 
-                    <AdventureCard key={adventure.id} ad={adventure} {...this.props} />
+                this.props.adventures.map(adventures => 
+                    <AdventureCard key={adventures.id} adventure={adventures} {...this.props} />
                 )
             }
             </section>
