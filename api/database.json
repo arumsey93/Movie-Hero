@@ -5,6 +5,12 @@
       "password": "password",
       "email": "alexrumsey1993@gmail.com",
       "id": 1
+    },
+    {
+      "username": "tyler",
+      "password": "tyler",
+      "email": "tyler",
+      "id": 2
     }
   ],
   "heroes": [
@@ -19,6 +25,12 @@
       "desc": "Tyty",
       "userId": 1,
       "id": 2
+    },
+    {
+      "name": "Danny",
+      "desc": "Danny",
+      "userId": 2,
+      "id": 3
     }
   ],
   "adventures": [],
