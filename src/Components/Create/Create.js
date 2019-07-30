@@ -64,7 +64,7 @@ export default class Create extends Component {
                             <div className="col text-center">
                             <button
                                 type="heroSubmit"
-                                className="btn btn-primary"
+                                className="btn btn-warning"
                             >
                             Submit
                             </button>
