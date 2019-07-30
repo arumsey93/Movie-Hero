@@ -32,7 +32,6 @@ export default class Register extends Component {
         return temp
       });
       if (findUser) {
-        console.log("if ",findUser)
         alert(
           "username or email already in use."
         );

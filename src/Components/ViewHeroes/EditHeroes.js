@@ -25,6 +25,7 @@ export default class EditHeroForm extends Component {
                 name: this.state.heroName,
                 desc: this.state.heroDesc,
                 userId: +sessionStorage.getItem("userId"),
+                id: this.props.match.params.heroId
             }
             this.props.updateHero(hero)
             .then(() => this.props.history.push("/heroes"))
@@ -32,10 +33,8 @@ export default class EditHeroForm extends Component {
     }
 
     componentDidMount() {
-        console.log("hero")
         createHandler.get(this.props.match.params.heroId)
         .then(hero => {
-            console.log("hero", hero)
             this.setState({
                 heroName: hero.name,
                 heroDesc: hero.desc,
@@ -45,7 +44,6 @@ export default class EditHeroForm extends Component {
     }
 
     render () {
-        console.log("hero")
         return (
             <React.Fragment>
                 <form className="heroForm">
