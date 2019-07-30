@@ -8,6 +8,7 @@ import Dashboard from './Dashboard/Dashboard'
 import Create from './Create/Create'
 import createHandler from "./APIManager/createhandler";
 import ViewHeroes from "./ViewHeroes/View"
+import EditHeroForm from "./ViewHeroes/EditHeroes"
 
 class ApplicationViews extends Component {
     state = {
@@ -43,6 +44,26 @@ class ApplicationViews extends Component {
             this.setState({
                 heroes: heroes
             }))
+
+    updateHero = hero => {
+        return createHandler.put(hero)
+        .then(() => createHandler.getAll())
+        .then(heroes => {
+            this.setState({
+                heroes: heroes
+            })
+        })
+    }
+
+    deleteHero = hero => {
+        createHandler.delete(hero)
+        .then(() => createHandler.getAll())
+        .then(heroes => {
+            this.setState({
+                heroes: heroes
+            })
+        })
+    }
 
     isAuthenticated = () => sessionStorage.getItem("userId") !== null;
 
@@ -105,11 +126,24 @@ class ApplicationViews extends Component {
                     return (
                         <ViewHeroes {...props}
                         heroes={this.state.heroes}
+                        deleteHero={this.deleteHero}
                         />
                     )
                 } else {
                     return <Redirect to="/welcome" />
                 }
+            }}
+            />
+            <Route 
+            exact
+            path="/heroes/:heroId(\d+)/edit"
+            render={props => {
+                return (
+                    <EditHeroForm {...props}
+                    heroes={this.state.heroes}
+                    updateHero={this.updateHero}
+                    />
+                )
             }}
             />
             </React.Fragment>

@@ -10,12 +10,12 @@ export default class ViewHeroes extends Component {
             <section className="heroes">
             {
                 this.props.heroes.map(hero =>
-                    <HeroCard key={hero.id} animal={hero} {...this.props} />
+                    <HeroCard key={hero.id} hero={hero} {...this.props} />
                 )
             }
             <div className="newHeroBtn">
                 <button type="button"
-                    className="btn btn-success"
+                    className="btn btn-warning"
                     onClick={() => {
                         this.props.history.push("/create")}
                     }>
