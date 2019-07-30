@@ -21,6 +21,12 @@ export default class ItemsList extends Component {
         })
       }
 
+      delete(id){
+          this.setState(prevState => ({
+              data: prevState.data.filter(el => el != id)
+          }))
+      }
+
     // updateItems = evt => {
     //     evt.preventDefault()
     //     if (this.weapon === "") {
@@ -121,7 +127,7 @@ export default class ItemsList extends Component {
                             <button 
                             type="button"
                             className="delwepbtn btn btn-warning"
-
+                            onClick={this.delete(weapon.id)}
                             >Remove Weapon</button>
                             <button 
                             type="button"
