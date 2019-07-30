@@ -13,7 +13,6 @@ export default class ItemsList extends Component {
         const stateToChange = {}
         stateToChange[evt.target.id] = evt.target.value
         this.setState(stateToChange)
-        console.log(stateToChange)
     }
 
     toggleMenu = () => {
@@ -54,6 +53,7 @@ export default class ItemsList extends Component {
                     id="weapon"
                     onChange={this.handleFieldChange}
                     >
+                    <option value="">Weapons:</option>
                     {
                     this.props.weapons.map(weapon => 
                         <option 
@@ -72,6 +72,7 @@ export default class ItemsList extends Component {
                     id="defense"
                     onChange={this.handleFieldChange}
                     >
+                    <option value="">Defense Items:</option>
                     {
                     this.props.defenses.map(defense => 
                         <option 
@@ -90,6 +91,7 @@ export default class ItemsList extends Component {
                     id="utility"
                     onChange={this.handleFieldChange}
                     >
+                    <option value="">Utility Items:</option>
                     {
                     this.props.utility.map(ut => 
                         <option 
@@ -103,30 +105,35 @@ export default class ItemsList extends Component {
                     }
                     </select>
                 </section>
-                <div className="container">
-                    <div className="row">
-                        <div className="col text-center">
-                            <button
-                            type="button"
-                            className="btn btn-success"
-                            onClick={this.toggleMenu}>
-                            Add Items
-                            </button>
-                        </div>
-                    </div>
-                </div>
                 <section className="itemList">
                     <div className="itemContainer">
                         <div className="ICHeader">
                             <h5 className="itemHeader">Item List:</h5>
                         </div>
-                        <section className="itemBox">
+                        <section className="border itemBox">
                             <div className={`menu ${menuVis}`}>
                                 <p>{this.state.weapon}</p>
                                 <p>{this.state.defense}</p>
                                 <p>{this.state.utility}</p>
                             </div>
                         </section>
+                        <div className="threebtns">
+                            <button 
+                            type="button"
+                            className="delwepbtn btn btn-warning"
+
+                            >Remove Weapon</button>
+                            <button 
+                            type="button"
+                            className="deldefbtn btn btn-warning"
+
+                            >Remove Defense</button>
+                            <button 
+                            type="button"
+                            className="delutilbtn btn btn-warning"
+
+                            >Remove Utility</button>
+                        </div>
                     </div>
                 </section>
             </React.Fragment>

@@ -221,7 +221,7 @@ class ApplicationViews extends Component {
             />
             <Route
             exact
-            path="/items/:adventureId(\d+)/items"
+            path="/adventures/:adventureId(\d+)/items"
             render={props => {
                 if(this.isAuthenticated()) {
                     return (

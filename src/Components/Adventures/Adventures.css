@@ -18,5 +18,21 @@
 
 .itemBox {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    border-color: 1px solid black;
+}
+
+.threebtns {
+    display: flex;
+    justify-content: center;
+}
+
+.delwepbtn {
+    display: flex;
+    margin-right: 15px;
+}
+
+.deldefbtn {
+    display: flex;
+    margin-right: 15px;
 }
