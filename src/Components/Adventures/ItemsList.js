@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import './Adventures.css'
-import weaponheandler from '../APIManager/weaponhandler'
-import defensehandler from '../APIManager/defensehandler'
-import utilityhandler from '../APIManager/utilityhandler'
 
 export default class ItemsList extends Component {
     state = {
@@ -25,26 +22,26 @@ export default class ItemsList extends Component {
         })
       }
 
-    updateItems = evt => {
-        evt.preventDefault()
-        if (this.weapon === "") {
-            alert("Please Select A Weapon")
-        } else if (this.defense === "") {
-            alert("Please Select A Defense Item")
-        } else if (this.utility === "") {
-            alert("Please Select A Utility Item")
-        } else {
-            const itemBag = {
-                weapon: this.state.weapon,
-                defense: this.state.defense,
-                utility: this.state.utility,
-                userId: +sessionStorage.getItem("userId"),
-                heroId: this.props.match.params.heroId,
-                adventureId: this.props.match.params.adventureId
-            }
+    // updateItems = evt => {
+    //     evt.preventDefault()
+    //     if (this.weapon === "") {
+    //         alert("Please Select A Weapon")
+    //     } else if (this.defense === "") {
+    //         alert("Please Select A Defense Item")
+    //     } else if (this.utility === "") {
+    //         alert("Please Select A Utility Item")
+    //     } else {
+    //         const itemBag = {
+    //             weapon: this.state.weapon,
+    //             defense: this.state.defense,
+    //             utility: this.state.utility,
+    //             userId: +sessionStorage.getItem("userId"),
+    //             heroId: this.props.match.params.heroId,
+    //             adventureId: this.props.match.params.adventureId
+    //         }
 
-        }
-    }
+    //     }
+    // }
 
     render () {
     const menuVis = this.state.showMenu ? 'show' : 'hide';
@@ -52,7 +49,7 @@ export default class ItemsList extends Component {
             <React.Fragment>
                 <section className="itemsList">
                     <h5>Weapons:</h5>
-                    <select 
+                    <select
                     className="weaponsSelect"
                     id="weapon"
                     onChange={this.handleFieldChange}
@@ -61,6 +58,7 @@ export default class ItemsList extends Component {
                     this.props.weapons.map(weapon => 
                         <option 
                         required 
+                        key={weapon.id}
                         id={weapon.id}
                         value={weapon.name}>
                         {weapon.name}
@@ -69,7 +67,7 @@ export default class ItemsList extends Component {
                     }
                     </select>
                     <h5>Defense:</h5>
-                    <select 
+                    <select
                     className="defenseSelect"
                     id="defense"
                     onChange={this.handleFieldChange}
@@ -78,6 +76,7 @@ export default class ItemsList extends Component {
                     this.props.defenses.map(defense => 
                         <option 
                         required
+                        key={defense.id}
                         id={defense.id}
                         value={defense.name}>
                         {defense.name}
@@ -86,7 +85,7 @@ export default class ItemsList extends Component {
                     }
                     </select>
                     <h5>Utility:</h5>
-                    <select 
+                    <select
                     className="utilitySelect"
                     id="utility"
                     onChange={this.handleFieldChange}
@@ -94,7 +93,8 @@ export default class ItemsList extends Component {
                     {
                     this.props.utility.map(ut => 
                         <option 
-                        required 
+                        required
+                        key={ut.id} 
                         id={ut.id}
                         value={ut.name}>
                         {ut.name}
