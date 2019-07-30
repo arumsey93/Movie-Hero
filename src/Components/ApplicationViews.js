@@ -9,6 +9,8 @@ import Create from './Create/Create'
 import createHandler from "./APIManager/createhandler";
 import ViewHeroes from "./ViewHeroes/View"
 import EditHeroForm from "./ViewHeroes/EditHeroes"
+import AdventuresList from "./Adventures/Adventures";
+import adventurehandler from "./APIManager/adventurehandler";
 
 class ApplicationViews extends Component {
     state = {
@@ -26,6 +28,8 @@ class ApplicationViews extends Component {
           .then(users => this.setState({ users: users }))
         createHandler.getAll()
             .then(heroes => this.setState({heroes: heroes}))
+        adventurehandler.getAll()
+            .then(adventures => this.setState({adventures: adventures}))
     };
 
     addUser = user =>
@@ -144,6 +148,20 @@ class ApplicationViews extends Component {
                     updateHero={this.updateHero}
                     />
                 )
+            }}
+            />
+            <Route
+            exact
+            path="/adventures"
+            render={props => {
+                if(this.isAuthenticated()) {
+                    return (
+                        <AdventuresList {...props}
+                        adventures={this.state.adventures} />
+                    )
+                } else {
+                    return <Redirect to="/welcome" />
+                }
             }}
             />
             </React.Fragment>

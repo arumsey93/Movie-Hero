@@ -31,6 +31,15 @@ export default class HeroCard extends Component {
                             }
                         }
                     >Delete</button>
+                    <button
+                            type="button"
+                            className="btn btn-success"
+                            onClick={
+                                () => {
+                                    this.props.history.push(`/adventures`)
+                                }
+                            }
+                    >Select Hero</button>
                 </div>
             </div>
         </div>
