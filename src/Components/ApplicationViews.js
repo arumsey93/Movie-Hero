@@ -70,6 +70,36 @@ class ApplicationViews extends Component {
         })
     }
 
+    updateWeapon = weapon => {
+        return weaponhandler.put(weapon)
+        .then(() => weaponhandler.getAll())
+        .then(weapons => {
+            this.setState({
+                weapons: weapons
+            })
+        })
+    }
+
+    updateDefense = def => {
+        return defensehandler.put(def)
+        .then(() => defensehandler.getAll())
+        .then(defense => {
+            this.setState({
+                defense: defense
+            })
+        })
+    }
+
+    updateUtility = util => {
+        return utilityhandler.put(util)
+        .then(() => utilityhandler.getAll())
+        .then(utility => {
+            this.setState({
+                utility: utility
+            })
+        })
+    }
+
     deleteHero = hero => {
         createHandler.delete(hero)
         .then(() => createHandler.getAll())
@@ -177,7 +207,21 @@ class ApplicationViews extends Component {
             />
             <Route
             exact
-            path="/items"
+            path="/:heroId(\d+)/adventures"
+            render={props => {
+                if(this.isAuthenticated()) {
+                    return (
+                        <AdventuresList {...props}
+                        adventures={this.state.adventures} />
+                    )
+                } else {
+                    return <Redirect to="/welcome" />
+                }
+            }}
+            />
+            <Route
+            exact
+            path="/items/:adventureId(\d+)/items"
             render={props => {
                 if(this.isAuthenticated()) {
                     return (
