@@ -15,6 +15,7 @@ import weaponhandler from "./APIManager/weaponhandler"
 import defensehandler from "./APIManager/defensehandler"
 import utilityhandler from "./APIManager/utilityhandler"
 import ItemsList from "./Adventures/ItemsList"
+import baghandler from "./APIManager/baghandler"
 
 
 class ApplicationViews extends Component {
@@ -50,7 +51,7 @@ class ApplicationViews extends Component {
 
     adventureFunction = id =>
     this.setState({
-        adventure: id
+        adventure: id,
     })
 
     heroFunction = id => 
@@ -72,6 +73,14 @@ class ApplicationViews extends Component {
     this.setState({
         util: id
     })
+
+    addBag = bag =>
+    baghandler.post(bag)
+        .then(() => baghandler.getAll())
+        .then(bags => 
+            this.setState({
+                bag: bags
+            }))
 
     addUser = user =>
     UserHandler.post(user)
@@ -225,21 +234,6 @@ class ApplicationViews extends Component {
             />
             <Route
             exact
-            path="/adventures"
-            render={props => {
-                if(this.isAuthenticated()) {
-                    return (
-                        <AdventuresList {...props}
-                        adventures={this.state.adventures} 
-                        adventureFunction={this.adventureFunction} />
-                    )
-                } else {
-                    return <Redirect to="/welcome" />
-                }
-            }}
-            />
-            <Route
-            exact
             path="/:heroId(\d+)/adventures"
             render={props => {
                 if(this.isAuthenticated()) {
@@ -269,6 +263,9 @@ class ApplicationViews extends Component {
                         weaponFunction={this.weaponFunction}
                         defenseFunction={this.defenseFunction}
                         utilityFunction={this.utilityFunction}
+                        addBag={this.addBag}
+                        heroes={this.state.heroes}
+                        hero={this.state.hero}
                         />
                     )
                 }

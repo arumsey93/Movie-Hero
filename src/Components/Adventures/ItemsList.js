@@ -62,26 +62,27 @@ export default class ItemsList extends Component {
 
 
 
-    // updateItems = evt => {
-    //     evt.preventDefault()
-    //     if (this.weapon === "") {
-    //         alert("Please Select A Weapon")
-    //     } else if (this.defense === "") {
-    //         alert("Please Select A Defense Item")
-    //     } else if (this.utility === "") {
-    //         alert("Please Select A Utility Item")
-    //     } else {
-    //         const itemBag = {
-    //             weapon: this.state.weapon,
-    //             defense: this.state.defense,
-    //             utility: this.state.utility,
-    //             userId: +sessionStorage.getItem("userId"),
-    //             heroId: this.props.match.params.heroId,
-    //             adventureId: this.props.match.params.adventureId,
-    //         }
-
-    //     }
-    // }
+    updateItems = () => {
+        if (this.state.weapon === "") {
+            alert("Please Select A Weapon")
+        } else if (this.state.defense === "") {
+            alert("Please Select A Defense Item")
+        } else if (this.state.utility === "") {
+            alert("Please Select A Utility Item")
+        } else {
+            const itemBag = {
+                weapon: this.state.weapon,
+                defense: this.state.defense,
+                utility: this.state.utility,
+                userId: +sessionStorage.getItem("userId"),
+                heroId: this.props.hero,
+                timestamp: Date.now(),
+                adventureId: this.props.match.params.adventureId
+            }
+            this.props.addBag(itemBag)
+            console.log(itemBag)
+        }
+    }
 
     render () {
     const menuVis = this.state.showMenu ? 'show' : 'hide';
@@ -195,10 +196,12 @@ export default class ItemsList extends Component {
                             type="button"
                             className="addItemsBtn btn btn-warning btn-lg"
                             onClick={
-                                () => {
+                                (evt) => {
+                                    evt.preventDefault()
                                     this.props.weaponFunction(this.state.weaponId)
                                     this.props.defenseFunction(this.state.defenseId)
                                     this.props.utilityFunction(this.state.utilityId)
+                                    this.updateItems()
                                 }
                             }
                             >Add To Bag</button>

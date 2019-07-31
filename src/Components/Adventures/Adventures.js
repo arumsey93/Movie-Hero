@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Adventures.css'
 import AdventureCard from './AdventureCard'
-import adventureFunction from '../ApplicationViews'
 
 export default class AdventuresList extends Component {
     render () {
