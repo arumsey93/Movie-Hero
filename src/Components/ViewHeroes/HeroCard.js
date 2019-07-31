@@ -37,6 +37,7 @@ export default class HeroCard extends Component {
                             onClick={
                                 () => {
                                     this.props.history.push(`/${this.props.hero.id}/adventures`)
+                                    this.props.heroFunction(this.props.hero.id)
                                 }
                             }
                     >Select Hero</button>

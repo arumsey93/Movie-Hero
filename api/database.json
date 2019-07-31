@@ -11,6 +11,12 @@
       "password": "tyler",
       "email": "tyler",
       "id": 2
+    },
+    {
+      "username": "Jennifer",
+      "password": "password",
+      "email": "Jennifer@me.com",
+      "id": 3
     }
   ],
   "heroes": [
@@ -31,6 +37,18 @@
       "desc": "Danny",
       "userId": 2,
       "id": 3
+    },
+    {
+      "name": "Jennifer",
+      "desc": "A great girlfriend.",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "name": "Jennifer",
+      "desc": "My Girlfriend",
+      "userId": 1,
+      "id": 5
     }
   ],
   "adventures": [

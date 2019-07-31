@@ -19,7 +19,10 @@ export default class ViewHeroes extends Component {
             <section className="heroes">
             {
                 this.createHero(this.props.heroes).map(hero =>
-                    <HeroCard key={hero.id} hero={hero} {...this.props} />
+                    <HeroCard key={hero.id} 
+                    hero={hero} 
+                    heroFunction={this.props.heroFunction} 
+                    {...this.props} />
                 )
             }
             <div className="newHeroBtn">

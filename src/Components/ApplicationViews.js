@@ -25,7 +25,12 @@ class ApplicationViews extends Component {
         bag: [],
         weapons: [],
         defense: [],
-        utility: []
+        utility: [],
+        adventure: "",
+        hero: "",
+        weapon: "",
+        def: "",
+        util: ""
     };
 
     componentDidMount() {
@@ -42,6 +47,31 @@ class ApplicationViews extends Component {
             .then(() => utilityhandler.getAll())
             .then(utility => this.setState({utility: utility}))
     };
+
+    adventureFunction = id =>
+    this.setState({
+        adventure: id
+    })
+
+    heroFunction = id => 
+    this.setState({
+        hero: id
+    })
+
+    weaponFunction = id => 
+    this.setState({
+        weapon: id
+    })
+
+    defenseFunction = id =>
+    this.setState({
+        def: id
+    })
+
+    utilityFunction = id =>
+    this.setState({
+        util: id
+    })
 
     addUser = user =>
     UserHandler.post(user)
@@ -99,6 +129,7 @@ class ApplicationViews extends Component {
             })
         })
     }
+    
 
     deleteHero = hero => {
         createHandler.delete(hero)
@@ -172,6 +203,7 @@ class ApplicationViews extends Component {
                         <ViewHeroes {...props}
                         heroes={this.state.heroes}
                         deleteHero={this.deleteHero}
+                        heroFunction={this.heroFunction}
                         />
                     )
                 } else {
@@ -198,7 +230,8 @@ class ApplicationViews extends Component {
                 if(this.isAuthenticated()) {
                     return (
                         <AdventuresList {...props}
-                        adventures={this.state.adventures} />
+                        adventures={this.state.adventures} 
+                        adventureFunction={this.adventureFunction} />
                     )
                 } else {
                     return <Redirect to="/welcome" />
@@ -212,7 +245,8 @@ class ApplicationViews extends Component {
                 if(this.isAuthenticated()) {
                     return (
                         <AdventuresList {...props}
-                        adventures={this.state.adventures} />
+                        adventures={this.state.adventures} 
+                        adventureFunction={this.adventureFunction}  />
                     )
                 } else {
                     return <Redirect to="/welcome" />
@@ -232,6 +266,9 @@ class ApplicationViews extends Component {
                         updateWeapon={this.updateWeapon}
                         updateDefense={this.updateDefense}
                         updateUtility={this.updateUtility}
+                        weaponFunction={this.weaponFunction}
+                        defenseFunction={this.defenseFunction}
+                        utilityFunction={this.utilityFunction}
                         />
                     )
                 }

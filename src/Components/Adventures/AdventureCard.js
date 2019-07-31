@@ -14,7 +14,8 @@ export default class AdventureCard extends Component {
                     className="btn btn-warning"
                     id={this.props.adventure.id}
                     onClick={() => {
-                        this.props.history.push(`/adventures/${this.props.adventure.id}/items`)}
+                        this.props.history.push(`/adventures/${this.props.adventure.id}/items`)
+                        this.props.adventureFunction(this.props.adventure.id)}
                     }>
                     Select
                 </button>
