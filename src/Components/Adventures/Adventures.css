@@ -96,3 +96,9 @@
     display: flex;
     justify-content: center;
 }
+
+.startAdventureBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
