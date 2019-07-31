@@ -9,6 +9,7 @@ export default class ItemsList extends Component {
         showMenu: false,
         heroId: parseInt(sessionStorage.getItem("heroId")),
         adventureScore: parseInt(sessionStorage.getItem("adventureScore")),
+        adventureKey: sessionStorage.getItem("adventureKey"),
         selectedOption: "",
         selectedDefense: "",
         selectedUtility: "",
@@ -97,8 +98,10 @@ export default class ItemsList extends Component {
                 timestamp: Date.now(),
                 adventureId: parseInt(this.props.match.params.adventureId),
                 adventureScore: this.state.adventureScore,
+                adventureKey: this.state.adventureKey,
                 score: this.state.weaponScore + this.state.defenseScore,
-                utilityKey: this.state.utilityKey
+                utilityKey: this.state.utilityKey,
+                won: false
             }
             this.props.addBag(itemBag)
             console.log(itemBag)
@@ -300,7 +303,9 @@ export default class ItemsList extends Component {
                             className="btn btn-danger btn-lg"
                             // onClick={
                             //     () => {
-                            //         if ()
+                            //         if (itemBag.score && itembag.>= itemBag.adventureScore) {
+                                        
+                            //         }
                             //     }
                             // }
                             >Start Your Adventure!</button>

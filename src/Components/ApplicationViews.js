@@ -29,6 +29,7 @@ class ApplicationViews extends Component {
         utility: [],
         adventure: "",
         adventureScore: "",
+        adventureKey: "",
         hero: "",
         weapon: "",
         def: "",
@@ -50,10 +51,11 @@ class ApplicationViews extends Component {
             .then(utility => this.setState({utility: utility}))
     };
 
-    adventureFunction = (id, score) => {
+    adventureFunction = (id, score, key) => {
     this.setState({
         adventure: id,
-        adventureScore: score
+        adventureScore: score,
+        adventureKey: key
     })
 }
 
@@ -270,6 +272,7 @@ class ApplicationViews extends Component {
                         heroes={this.state.heroes}
                         hero={this.state.hero}
                         adventureScore={this.state.adventureScore}
+                        adventureKey={this.state.adventureKey}
                         />
                     )
                 }
