@@ -11,6 +11,12 @@
       "password": "tyler",
       "email": "tyler",
       "id": 2
+    },
+    {
+      "username": "Jennifer",
+      "password": "password",
+      "email": "Jennifer@me.com",
+      "id": 3
     }
   ],
   "heroes": [
@@ -31,6 +37,24 @@
       "desc": "Danny",
       "userId": 2,
       "id": 3
+    },
+    {
+      "name": "Jennifer",
+      "desc": "A great girlfriend.",
+      "userId": 3,
+      "id": 4
+    },
+    {
+      "name": "Jennifer",
+      "desc": "My Girlfriend",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "Joe",
+      "desc": "He is Joe",
+      "userId": 1,
+      "id": 6
     }
   ],
   "adventures": [
@@ -44,7 +68,7 @@
     {
       "name": "Megalodon",
       "description": "A giant shark is attacking your underwater science lab, your team may have inadvertently let it out.  Stop the shark, and save the innocent bystanders in its' path.",
-      "score": 2,
+      "score": 3,
       "key": "water",
       "id": 2
     },
@@ -62,10 +86,149 @@
       "key": "cardio",
       "id": 4
     }
-
   ],
-  "bag": [],
-  "weapons": [],
-  "defense": [],
-  "utility": []
+  "bag": [
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "timestamp": 1564595988039,
+      "adventureId": "1",
+      "id": 1
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "timestamp": 1564596232252,
+      "adventureId": "1",
+      "id": 2
+    },
+    {
+      "weapon": "Sword",
+      "defense": "Shield",
+      "utility": "Fire Extinguisher",
+      "userId": 1,
+      "timestamp": 1564596743986,
+      "adventureId": "1",
+      "id": 3
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "timestamp": 1564596927176,
+      "adventureId": "3",
+      "id": 4
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Puppy Dog Eyes",
+      "utility": "Cell Phone",
+      "userId": 1,
+      "heroId": "",
+      "timestamp": 1564596974428,
+      "adventureId": "3",
+      "id": 5
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "heroId": 1,
+      "timestamp": 1564596985263,
+      "adventureId": "1",
+      "id": 6
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "heroId": "",
+      "timestamp": 1564597103346,
+      "adventureId": "1",
+      "id": 7
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "heroId": "",
+      "timestamp": 1564597106738,
+      "adventureId": "1",
+      "id": 8
+    }
+  ],
+  "weapons": [
+    {
+      "name": "Sword",
+      "id": 1,
+      "score": 1
+    },
+    {
+      "name": "Kung Fu Abilities",
+      "id": 2,
+      "score": 2
+    },
+    {
+      "name": "Gun",
+      "id": 3,
+      "score": 2
+    },
+    {
+      "name": "Spear Gun",
+      "id": 4,
+      "score": 1
+    }
+  ],
+  "defense": [
+    {
+      "name": "Shield",
+      "id": 1,
+      "score": 2
+    },
+    {
+      "name": "Taser",
+      "id": 2,
+      "score": 2
+    },
+    {
+      "name": "Pepper Spray",
+      "id": 3,
+      "score": 3
+    },
+    {
+      "name": "Puppy Dog Eyes",
+      "id": 4,
+      "score": 1
+    }
+  ],
+  "utility": [
+    {
+      "name": "Fire Extinguisher",
+      "id": 1,
+      "key": "fire"
+    },
+    {
+      "name": "Scuba Suit",
+      "id": 2,
+      "key": "water"
+    },
+    {
+      "name": "Cell Phone",
+      "id": 3,
+      "key": "phone"
+    },
+    {
+      "name": "Nike Running Shoes",
+      "id": 4,
+      "key": "cardio"
+    }
+  ]
 }

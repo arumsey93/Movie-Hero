@@ -1,0 +1,98 @@
+.itemsList {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.ItemPageHeader{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.wepItemDivHeader {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.defItemDivHeader{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.utilItemDivHeader {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.itemHeader {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.itemsDiv {
+    display: flex;
+}
+
+.itemBox {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    margin-right: 210px;
+    margin-left: 210px;
+}
+
+.threebtns {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px
+}
+
+.addItemsToBag {
+    display: flex;
+    justify-content: center;
+    margin-top:25px;
+}
+
+.delwepbtn {
+    display: flex;
+    margin-right: 15px;
+}
+
+.deldefbtn {
+    display: flex;
+    margin-right: 15px;
+}
+
+.ItemIndexHeaderDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.itemIndex {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border: 1px solid black
+}
+
+.defenseIndexHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.weaponIndexHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.utilityIndexHeader {
+    display: flex;
+    justify-content: center;
+}
