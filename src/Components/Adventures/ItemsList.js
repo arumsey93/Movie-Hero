@@ -7,6 +7,11 @@ export default class ItemsList extends Component {
         defense: "",
         utility: "",
         showMenu: false,
+        heroId: parseInt(sessionStorage.getItem("heroId")),
+        adventureScore: parseInt(sessionStorage.getItem("adventureScore")),
+        selectedOption: "",
+        selectedDefense: "",
+        selectedUtility: "",
     }
 
     handleFieldChange = evt => {
@@ -15,13 +20,26 @@ export default class ItemsList extends Component {
         this.setState(stateToChange)
     }
 
+    handleClickChange = evt => {
+        this.setState({selectedOption: evt.target.value});
+    }
+
+    handleDefenseChange = evt => {
+        this.setState({selectedDefense: evt.target.value})
+    }
+
+    handleUtilityChange = evt => {
+        this.setState({selectedUtility: evt.target.value})
+    }
+
     weaponHandleFieldChange = evt => {
         const newStateToChange = {}
-        newStateToChange[evt.target.id] = evt.target.value
+        newStateToChange.selectedOption = evt.target.value
         this.props.weapons.forEach(weapon =>
             {
-                if(weapon.name === newStateToChange[evt.target.id]) {
+                if(weapon.name === newStateToChange.selectedOption) {
                     newStateToChange.weaponId = weapon.id
+                    newStateToChange.weaponScore = weapon.score
                 } 
             }
             )
@@ -30,11 +48,12 @@ export default class ItemsList extends Component {
 
     defenseHandleFieldChange = evt => {
         const newStateToChange = {}
-        newStateToChange[evt.target.id] = evt.target.value
+        newStateToChange.selectedDefense = evt.target.value
         this.props.defenses.forEach(defense =>
             {
-                if(defense.name === newStateToChange[evt.target.id]) {
+                if(defense.name === newStateToChange.selectedDefense) {
                     newStateToChange.defenseId = defense.id
+                    newStateToChange.defenseScore= defense.score
                 } 
             }
             )
@@ -43,11 +62,12 @@ export default class ItemsList extends Component {
 
     utilityHandleFieldChange = evt => {
         const newStateToChange = {}
-        newStateToChange[evt.target.id] = evt.target.value
+        newStateToChange.selectedUtility = evt.target.value
         this.props.utility.forEach(ut =>
             {
-                if(ut.name === newStateToChange[evt.target.id]) {
+                if(ut.name === newStateToChange.selectedUtility) {
                     newStateToChange.utilityId = ut.id
+                    newStateToChange.utilityKey= ut.key
                 } 
             }
             )
@@ -60,24 +80,25 @@ export default class ItemsList extends Component {
         })
       }
 
-
-
     updateItems = () => {
-        if (this.state.weapon === "") {
+        if (this.state.selectedOption === "") {
             alert("Please Select A Weapon")
-        } else if (this.state.defense === "") {
+        } else if (this.state.selectedDefense === "") {
             alert("Please Select A Defense Item")
-        } else if (this.state.utility === "") {
+        } else if (this.state.selectedUtility === "") {
             alert("Please Select A Utility Item")
         } else {
             const itemBag = {
-                weapon: this.state.weapon,
-                defense: this.state.defense,
-                utility: this.state.utility,
+                weapon: this.state.selectedOption,
+                defense: this.state.selectedDefense,
+                utility: this.state.selectedUtility,
                 userId: +sessionStorage.getItem("userId"),
-                heroId: this.props.hero,
+                heroId: this.state.heroId,
                 timestamp: Date.now(),
-                adventureId: this.props.match.params.adventureId
+                adventureId: parseInt(this.props.match.params.adventureId),
+                adventureScore: this.state.adventureScore,
+                score: this.state.weaponScore + this.state.defenseScore,
+                utilityKey: this.state.utilityKey
             }
             this.props.addBag(itemBag)
             console.log(itemBag)
@@ -97,6 +118,7 @@ export default class ItemsList extends Component {
                             <h5>Weapons:</h5>
                         </div>
                         <select
+                        value={this.state.selectedOption}
                         className="weaponsSelect"
                         id="weapon"
                         onChange={this.weaponHandleFieldChange}
@@ -120,6 +142,7 @@ export default class ItemsList extends Component {
                             <h5>Defense:</h5>
                         </div>
                         <select
+                        value={this.state.selectedDefense}
                         className="defenseSelect"
                         id="defense"
                         onChange={this.defenseHandleFieldChange}
@@ -143,6 +166,7 @@ export default class ItemsList extends Component {
                             <h5>Utility:</h5>
                         </div>
                         <select
+                        value={this.state.selectedUtility}
                         className="utilitySelect"
                         id="utility"
                         onChange={this.utilityHandleFieldChange}
@@ -169,26 +193,29 @@ export default class ItemsList extends Component {
                         </div>
                         <section className="itemBox">
                             <div className={`menu ${menuVis}`}>
-                                <p id={this.state.weapon.id} className="weaponItemList">{this.state.weapon}</p>
-                                <p id={this.state.defense.id} className="defenseItemList">{this.state.defense}</p>
-                                <p id={this.state.utility.id} className="utilityItemList">{this.state.utility}</p>
+                                <p id={this.state.weapon.id} className="weaponItemList">{this.state.selectedOption}</p>
+                                <p id={this.state.defense.id} className="defenseItemList">{this.state.selectedDefense}</p>
+                                <p id={this.state.utility.id} className="utilityItemList">{this.state.selectedUtility}</p>
                             </div>
                         </section>
                         <div className="threebtns">
                             <button 
                             type="button"
                             className="delwepbtn btn btn-warning"
-                            onClick={() => this.setState({weapon: ""})}
+                            onClick={() => {
+                                this.setState({weapon: "", selectedOption: ""})
+                                }
+                            }
                             >Remove Weapon</button>
                             <button 
                             type="button"
                             className="deldefbtn btn btn-warning"
-                            onClick={() => this.setState({defense: ""})}
+                            onClick={() => this.setState({defense: "", selectedDefense: ""})}
                             >Remove Defense</button>
                             <button 
                             type="button"
                             className="delutilbtn btn btn-warning"
-                            onClick={() => this.setState({utility: ""})}
+                            onClick={() => this.setState({utility: "", selectedUtility: ""})}
                             >Remove Utility</button>
                         </div>
                         <div className="addItemsToBag">
@@ -266,8 +293,25 @@ export default class ItemsList extends Component {
                             </div>
                         </div>
                     </div>
+                    <div className="startAdventure">
+                        <div className="startAdventureBtn">
+                            <button
+                            type="button"
+                            className="btn btn-danger btn-lg"
+                            // onClick={
+                            //     () => {
+                            //         if ()
+                            //     }
+                            // }
+                            >Start Your Adventure!</button>
+                        </div>
+                    </div>
                 </section>
             </React.Fragment>
         )
     }
 }
+
+
+// compare and add score values
+// compare key values

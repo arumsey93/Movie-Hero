@@ -55,6 +55,12 @@
       "desc": "He is Joe",
       "userId": 1,
       "id": 6
+    },
+    {
+      "name": "Matthew",
+      "desc": "A good buddy.",
+      "userId": 1,
+      "id": 7
     }
   ],
   "adventures": [
@@ -102,67 +108,13 @@
       "defense": "Taser",
       "utility": "Scuba Suit",
       "userId": 1,
-      "timestamp": 1564596232252,
-      "adventureId": "1",
-      "id": 2
-    },
-    {
-      "weapon": "Sword",
-      "defense": "Shield",
-      "utility": "Fire Extinguisher",
-      "userId": 1,
-      "timestamp": 1564596743986,
-      "adventureId": "1",
-      "id": 3
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "Taser",
-      "utility": "Scuba Suit",
-      "userId": 1,
-      "timestamp": 1564596927176,
-      "adventureId": "3",
-      "id": 4
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "Puppy Dog Eyes",
-      "utility": "Cell Phone",
-      "userId": 1,
-      "heroId": "",
-      "timestamp": 1564596974428,
-      "adventureId": "3",
-      "id": 5
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "Taser",
-      "utility": "Scuba Suit",
-      "userId": 1,
       "heroId": 1,
-      "timestamp": 1564596985263,
-      "adventureId": "1",
-      "id": 6
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "Taser",
-      "utility": "Scuba Suit",
-      "userId": 1,
-      "heroId": "",
-      "timestamp": 1564597103346,
-      "adventureId": "1",
-      "id": 7
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "",
-      "utility": "Scuba Suit",
-      "userId": 1,
-      "heroId": "",
-      "timestamp": 1564597106738,
-      "adventureId": "1",
-      "id": 8
+      "timestamp": 1564607182675,
+      "adventureId": 1,
+      "adventureScore": 3,
+      "score": 4,
+      "utilityKey": "water",
+      "id": 2
     }
   ],
   "weapons": [
