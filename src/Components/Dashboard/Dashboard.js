@@ -58,6 +58,30 @@ export default class Dashboard extends Component {
                     >View Your Heroes</button>
                 </div>
             </div>
+            <div className="availableAdventuresDiv">
+                <div className="availableAdventuresHeaderDiv">
+                    <h5 className="availableAdventuresHeader">Available Adventures</h5>
+                </div>
+                <div className="availableAdventuresListDiv">
+                    <ul
+                    className="availableAdventuresList"
+                    id="availableAdventuresList"
+                    >
+                    {
+                        this.props.adventures.map(a =>
+                            <li
+                            key={a.id}
+                            value={a.name}
+                            id={a.id}>
+                                <b>{a.name}</b>
+                                <br></br>
+                                {a.description}
+                            </li>
+                            )
+                    }
+                    </ul>
+                </div>
+            </div>
             </section>
         )
     }

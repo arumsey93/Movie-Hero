@@ -218,6 +218,7 @@ class ApplicationViews extends Component {
                     return (
                         <Dashboard 
                         {...props} 
+                        adventures={this.state.adventures}
                         />
                     );
             } else {

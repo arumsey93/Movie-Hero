@@ -66,5 +66,27 @@
 .availableAdventuresHeaderDiv {
     display: flex;
     justify-content: center;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
     margin-top: 50px;
+}
+
+.availableAdventuresHeader{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.availableAdventuresListDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.availableAdventuresList {
+    list-style-type: none;
+    padding-right: 50px;
+    padding-left: 50px;
 }
