@@ -33,7 +33,8 @@ class ApplicationViews extends Component {
         hero: "",
         weapon: "",
         def: "",
-        util: ""
+        util: "",
+        itemBag: ""
     };
 
     componentDidMount() {
@@ -49,7 +50,15 @@ class ApplicationViews extends Component {
             .then(defense => this.setState({defense: defense}))
             .then(() => utilityhandler.getAll())
             .then(utility => this.setState({utility: utility}))
+            .then(() => baghandler.getAll())
+            .then(bag => this.setState({bag: bag}))
     };
+
+    bagFunction = (id) => {
+        this.setState({
+            itemBag: id
+        })
+    }
 
     adventureFunction = (id, score, key) => {
     this.setState({
@@ -261,7 +270,7 @@ class ApplicationViews extends Component {
                         <ItemsList {...props}
                         weapons={this.state.weapons}
                         defenses={this.state.defense}
-                        utility={this.state.utility}
+                        utilities={this.state.utility}
                         updateWeapon={this.updateWeapon}
                         updateDefense={this.updateDefense}
                         updateUtility={this.updateUtility}
@@ -273,6 +282,8 @@ class ApplicationViews extends Component {
                         hero={this.state.hero}
                         adventureScore={this.state.adventureScore}
                         adventureKey={this.state.adventureKey}
+                        itemBag={this.state.bag}
+                        bagFunction={this.bagFunction}
                         />
                     )
                 }

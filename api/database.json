@@ -102,49 +102,6 @@
       "timestamp": 1564595988039,
       "adventureId": "1",
       "id": 1
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "Taser",
-      "utility": "Scuba Suit",
-      "userId": 1,
-      "heroId": 1,
-      "timestamp": 1564607182675,
-      "adventureId": 1,
-      "adventureScore": 3,
-      "score": 4,
-      "utilityKey": "water",
-      "id": 2
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "Taser",
-      "utility": "Scuba Suit",
-      "userId": 1,
-      "heroId": 1,
-      "timestamp": 1564607709567,
-      "adventureId": 1,
-      "adventureScore": 3,
-      "adventureKey": "",
-      "score": 4,
-      "utilityKey": "water",
-      "won": false,
-      "id": 3
-    },
-    {
-      "weapon": "Kung Fu Abilities",
-      "defense": "Taser",
-      "utility": "Scuba Suit",
-      "userId": 1,
-      "heroId": 1,
-      "timestamp": 1564607867834,
-      "adventureId": 1,
-      "adventureScore": 3,
-      "adventureKey": null,
-      "score": 4,
-      "utilityKey": "water",
-      "won": false,
-      "id": 4
     }
   ],
   "weapons": [
