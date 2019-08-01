@@ -1,0 +1,92 @@
+.dashboardHeader {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashTitle {
+    display: flex;
+    justify-content: center;
+}
+
+.dashWelcome {
+    display: flex;
+    justify-content: center;
+}
+
+.rulesDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.rulesHeaderDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.rulesHeader {
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+.rulesListDiv {
+    display: flex;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.rules {
+    display: flex;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.buttonsDash {
+    display: flex;
+    justify-content: center;
+}
+
+.createHeroDashBtn {
+    display: flex;
+    padding-right: 80px;
+}
+
+.viewHeroDashBtn {
+    display: flex;
+    padding-left: 80px;
+}
+
+.availableAdventuresHeaderDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 50px;
+}
+
+.availableAdventuresHeader{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.availableAdventuresListDiv {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+}
+
+.availableAdventuresList {
+    list-style-type: none;
+    padding-right: 50px;
+    padding-left: 50px;
+}
