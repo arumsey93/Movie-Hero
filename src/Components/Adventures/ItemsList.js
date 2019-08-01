@@ -12,10 +12,18 @@ export default class ItemsList extends Component {
         selectedOption: "",
         selectedDefense: "",
         selectedUtility: "",
+        bagId: "",
         showMenu: false,
         heroId: parseInt(sessionStorage.getItem("heroId")),
+        heroName: sessionStorage.getItem("heroName"),
         adventureScore: parseInt(sessionStorage.getItem("adventureScore")),
         adventureKey: sessionStorage.getItem("adventureKey"),
+        adventureVictory: sessionStorage.getItem("adventureVictory"),
+        adventureDefeat: sessionStorage.getItem("adventureDefeat")
+    }
+
+    componentDidMount() {
+        this.props.getOneBag(this.props.bagId)
     }
 
     handleFieldChange = evt => {
@@ -110,10 +118,13 @@ export default class ItemsList extends Component {
                 utility: this.state.selectedUtility,
                 userId: +sessionStorage.getItem("userId"),
                 heroId: this.state.heroId,
+                heroName: this.state.heroName,
                 timestamp: Date.now(),
                 adventureId: parseInt(this.props.match.params.adventureId),
                 adventureScore: this.state.adventureScore,
                 adventureKey: this.state.adventureKey,
+                adventureVictory: this.state.adventureVictory,
+                adventureDefeat: this.state.adventureDefeat,
                 score: this.state.weaponScore + this.state.defenseScore,
                 utilityKey: this.state.utilityKey,
                 won: false
@@ -124,7 +135,6 @@ export default class ItemsList extends Component {
     }
 
     render () {
-    // const menuVis = this.state.showMenu ? 'show' : 'hide';
         return (
             <React.Fragment>
                 <div className="ItemsDiv">

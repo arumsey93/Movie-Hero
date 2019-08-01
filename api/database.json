@@ -61,6 +61,24 @@
       "desc": "A good buddy.",
       "userId": 1,
       "id": 7
+    },
+    {
+      "name": "Joey Shep",
+      "desc": "The Teacher.",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "New",
+      "desc": "New",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "name": "tytyttyty",
+      "desc": "asdfasdfasdf",
+      "userId": 1,
+      "id": 10
     }
   ],
   "adventures": [
@@ -69,39 +87,90 @@
       "description": "Your swamp has been invaded by fairy tale creatures, the only solution is to rescue the Princess from a castle guarded by a fire breathing dragon!",
       "score": 3,
       "key": "fire",
-      "id": 1
+      "id": 1,
+      "victory": "You passed the fire mission.",
+      "defeat": "YOU FAILED"
     },
     {
       "name": "Megalodon",
       "description": "A giant shark is attacking your underwater science lab, your team may have inadvertently let it out.  Stop the shark, and save the innocent bystanders in its' path.",
       "score": 3,
       "key": "water",
-      "id": 2
+      "id": 2,
+      "victory": "You passed the water mission.",
+      "defeat": "YOU FAILED"
     },
     {
-      "name": "Taken",
+      "name": "Kidnapped",
       "description": "People constantly kidnap your daughter, and you've had to rescue her like 4 times already.  You're sick of it.  She has been taken again, they have called you and confirmed this.  This time will be the last time, you'll make sure of it.",
       "score": 5,
       "key": "phone",
-      "id": 3
+      "id": 3,
+      "victory": "You passed the taken mission.",
+      "defeat": "YOU FAILED"
     },
     {
-      "name": "The Walking Dead",
+      "name": "The Jogging Dead",
       "description": "You wake up in a hospital, confused and dazed you walk down the hallway weakly, unable to fathom where everyone has gone.  You see a staff member down the hall, and call out to them.  They turn, their face dripping blood and discolored, and begin to hobble towards you while moaning loudly.  You realize you're stuck in the opening of every zombie movie, you must escape this hospital and check on your family!",
       "score": 4,
       "key": "cardio",
-      "id": 4
+      "id": 4,
+      "victory": "You passed the zombie mission.",
+      "defeat": "YOU FAILED"
     }
   ],
   "bag": [
     {
+      "weapon": "Gun",
+      "defense": "Taser",
+      "utility": "Cell Phone",
+      "userId": 1,
+      "heroId": 9,
+      "timestamp": 1564675343559,
+      "adventureId": 3,
+      "adventureScore": 5,
+      "adventureKey": "phone",
+      "adventureVictory": null,
+      "adventureDefeat": null,
+      "score": 4,
+      "utilityKey": "phone",
+      "won": false,
+      "id": 1
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Pepper Spray",
+      "utility": "Nike Running Shoes",
+      "userId": 1,
+      "heroId": 9,
+      "timestamp": 1564675559548,
+      "adventureId": 3,
+      "adventureScore": 5,
+      "adventureKey": "phone",
+      "adventureVictory": "You passed the taken mission.",
+      "adventureDefeat": "YOU FAILED",
+      "score": 5,
+      "utilityKey": "cardio",
+      "won": false,
+      "id": 2
+    },
+    {
+      "id": 3,
       "weapon": "Kung Fu Abilities",
       "defense": "Taser",
-      "utility": "Scuba Suit",
+      "utility": "Fire Extinguisher",
       "userId": 1,
-      "timestamp": 1564595988039,
-      "adventureId": "1",
-      "id": 1
+      "heroId": 10,
+      "heroName": "tytyttyty",
+      "timestamp": 1564683850135,
+      "adventureId": 1,
+      "adventureScore": 3,
+      "adventureKey": "fire",
+      "adventureVictory": "You passed the fire mission.",
+      "adventureDefeat": "YOU FAILED",
+      "score": 4,
+      "utilityKey": "fire",
+      "won": true
     }
   ],
   "weapons": [

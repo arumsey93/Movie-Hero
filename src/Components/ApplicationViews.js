@@ -16,6 +16,7 @@ import defensehandler from "./APIManager/defensehandler"
 import utilityhandler from "./APIManager/utilityhandler"
 import ItemsList from "./Adventures/ItemsList"
 import baghandler from "./APIManager/baghandler"
+import HallOfFame from "./HOF/HOF"
 
 
 class ApplicationViews extends Component {
@@ -30,11 +31,14 @@ class ApplicationViews extends Component {
         adventure: "",
         adventureScore: "",
         adventureKey: "",
+        adventureVictory: "",
+        adventureDefeat: "",
         hero: "",
+        heroName: "",
         weapon: "",
         def: "",
         util: "",
-        itemBag: ""
+        bagId: ""
     };
 
     componentDidMount() {
@@ -60,17 +64,20 @@ class ApplicationViews extends Component {
         })
     }
 
-    adventureFunction = (id, score, key) => {
+    adventureFunction = (id, score, key, victory, defeat) => {
     this.setState({
         adventure: id,
         adventureScore: score,
-        adventureKey: key
+        adventureKey: key,
+        adventureVictory: victory,
+        adventureDefeat: defeat
     })
 }
 
-    heroFunction = id => 
+    heroFunction = (id, name) => 
     this.setState({
-        hero: id
+        hero: id,
+        heroName: name
     })
 
     weaponFunction = id => 
@@ -91,9 +98,23 @@ class ApplicationViews extends Component {
     addBag = bag =>
     baghandler.post(bag)
         .then(() => baghandler.getAll())
-        .then(bags => 
+        .then(bag => 
             this.setState({
-                bag: bags
+                bag: bag
+            }))
+        .then(() => {
+            let recentBag = this.state.bag.slice(-1)[0]
+            this.setState({
+                bagId: recentBag.id
+            })
+            console.log(this.state.bagId)
+        })
+    
+    getOneBag = bag =>
+    baghandler.get(bag)
+        .then(bag =>
+            this.setState({
+                bag: bag
             }))
 
     addUser = user =>
@@ -119,6 +140,24 @@ class ApplicationViews extends Component {
         .then(heroes => {
             this.setState({
                 heroes: heroes
+            })
+        })
+    }
+
+    updateWon = (won) => {
+        baghandler.put(won)
+        .then(() => baghandler.getAll())
+        .then(bags =>
+            this.setState({
+                bag: bags
+            }))
+        .then(() => {
+            this.state.bag.forEach(dan => {
+                if (dan.id === won.id) {
+                    this.setState({
+                        bagId: dan.id
+                    })
+                }
             })
         })
     }
@@ -277,16 +316,40 @@ class ApplicationViews extends Component {
                         weaponFunction={this.weaponFunction}
                         defenseFunction={this.defenseFunction}
                         utilityFunction={this.utilityFunction}
+                        updateWon={this.updateWon}
+                        getOneBag={this.getOneBag}
                         addBag={this.addBag}
                         heroes={this.state.heroes}
                         hero={this.state.hero}
+                        heroName={this.state.heroName}
+                        adventures={this.state.adventures}
                         adventureScore={this.state.adventureScore}
                         adventureKey={this.state.adventureKey}
-                        itemBag={this.state.bag}
+                        adventureVictory={this.state.adventureVictory}
+                        adventureDefeat={this.state.adventureDefeat}
                         bagFunction={this.bagFunction}
+                        bagId={this.state.bagId}
+                        bag={this.state.bag}
                         />
                     )
                 }
+            }}
+            />
+            <Route 
+            exact
+            path="/hallOfFame"
+            render={props => {
+                return (
+                <HallOfFame {...props} 
+                bag={this.state.bag}
+                bagId={this.state.bagId}
+                adventures={this.state.adventures}
+                adventure={this.state.adventure}
+                heroes={this.state.heroes}
+                hero={this.state.hero}
+                heroName={this.state.heroName}
+                />
+                )
             }}
             />
             </React.Fragment>
