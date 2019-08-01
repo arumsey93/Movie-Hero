@@ -30,7 +30,11 @@ export default class StartAdventureButton extends Component{
     getScore = bag => {
         if(bag.score >= bag.adventureScore && bag.utilityKey === bag.adventureKey) {
             this.editedBag(bag)
-            alert(bag.adventureVictory)
+            if (window.confirm(bag.adventureVictory)) {
+                this.props.history.push("/hallOfFame")
+            } else {
+                return ""
+            }
         } else if (bag.score < bag.adventureScore && bag.utilityKey !== bag.adventureKey) {
             alert("Your items are too weak for this mission, and your utility item is not correct.  Try using different items!", bag.adventureDefeat)
         } else if (bag.utilityKey !== bag.adventureKey) {
