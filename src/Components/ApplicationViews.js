@@ -33,6 +33,7 @@ class ApplicationViews extends Component {
         adventureKey: "",
         adventureVictory: "",
         adventureDefeat: "",
+        adventureName: "",
         hero: "",
         heroName: "",
         weapon: "",
@@ -64,13 +65,14 @@ class ApplicationViews extends Component {
         })
     }
 
-    adventureFunction = (id, score, key, victory, defeat) => {
+    adventureFunction = (id, score, key, victory, defeat, name) => {
     this.setState({
         adventure: id,
         adventureScore: score,
         adventureKey: key,
         adventureVictory: victory,
-        adventureDefeat: defeat
+        adventureDefeat: defeat,
+        adventureName: name
     })
 }
 
@@ -327,6 +329,7 @@ class ApplicationViews extends Component {
                         adventureKey={this.state.adventureKey}
                         adventureVictory={this.state.adventureVictory}
                         adventureDefeat={this.state.adventureDefeat}
+                        adventureName={this.state.adventureName}
                         bagFunction={this.bagFunction}
                         bagId={this.state.bagId}
                         bag={this.state.bag}

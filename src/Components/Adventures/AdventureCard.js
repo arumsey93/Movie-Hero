@@ -18,11 +18,12 @@ adventureId = this.props.adventure.id
                     onClick={() => {
                         
                         this.props.history.push(`/adventures/${this.props.adventure.id}/items`)
-                        this.props.adventureFunction(this.adventureId, this.adventureScore, this.props.adventure.key, this.props.adventure.victory, this.props.adventure.defeat)
+                        this.props.adventureFunction(this.adventureId, this.adventureScore, this.props.adventure.key, this.props.adventure.victory, this.props.adventure.defeat, this.props.adventure.name)
                         sessionStorage.setItem("adventureScore", this.props.adventure.score)
                         sessionStorage.setItem("adventureKey", this.props.adventure.key)
                         sessionStorage.setItem("adventureVictory", this.props.adventure.victory)
                         sessionStorage.setItem("adventureDefeat", this.props.adventure.defeat)
+                        sessionStorage.setItem("adventureName", this.props.adventure.name)
 
                     }
                     }>

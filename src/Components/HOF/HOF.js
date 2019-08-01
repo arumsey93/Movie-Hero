@@ -16,7 +16,7 @@ export default class HallOfFame extends Component {
                                 return (
                                 <HallOfFameCard 
                                 key={b.id} 
-                                bag={b} 
+                                winnerBag={b} 
                                 {...this.props} />)
                             } else {
                                 return ""

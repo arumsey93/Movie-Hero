@@ -83,12 +83,12 @@
   ],
   "adventures": [
     {
-      "name": "Rescue the Princess",
+      "name": "Sherk",
       "description": "Your swamp has been invaded by fairy tale creatures, the only solution is to rescue the Princess from a castle guarded by a fire breathing dragon!",
       "score": 3,
       "key": "fire",
       "id": 1,
-      "victory": "You passed the fire mission.",
+      "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
       "defeat": "YOU FAILED"
     },
     {
@@ -97,7 +97,7 @@
       "score": 3,
       "key": "water",
       "id": 2,
-      "victory": "You passed the water mission.",
+      "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
       "defeat": "YOU FAILED"
     },
     {
@@ -106,16 +106,16 @@
       "score": 5,
       "key": "phone",
       "id": 3,
-      "victory": "You passed the taken mission.",
+      "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
       "defeat": "YOU FAILED"
     },
     {
-      "name": "The Jogging Dead",
+      "name": "29 Days Later",
       "description": "You wake up in a hospital, confused and dazed you walk down the hallway weakly, unable to fathom where everyone has gone.  You see a staff member down the hall, and call out to them.  They turn, their face dripping blood and discolored, and begin to hobble towards you while moaning loudly.  You realize you're stuck in the opening of every zombie movie, you must escape this hospital and check on your family!",
       "score": 4,
       "key": "cardio",
       "id": 4,
-      "victory": "You passed the zombie mission.",
+      "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
       "defeat": "YOU FAILED"
     }
   ],
@@ -171,6 +171,44 @@
       "score": 4,
       "utilityKey": "fire",
       "won": true
+    },
+    {
+      "id": 4,
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Fire Extinguisher",
+      "userId": 1,
+      "heroId": 1,
+      "heroName": "Alex",
+      "timestamp": 1564685559157,
+      "adventureId": 1,
+      "adventureScore": 3,
+      "adventureKey": "fire",
+      "adventureVictory": "You passed the fire mission.",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Sherk",
+      "score": 4,
+      "utilityKey": "fire",
+      "won": true
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "heroId": 1,
+      "heroName": "Alex",
+      "timestamp": 1564685874267,
+      "adventureId": 1,
+      "adventureScore": 3,
+      "adventureKey": "fire",
+      "adventureVictory": "You passed the fire mission.",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Sherk",
+      "score": 4,
+      "utilityKey": "water",
+      "won": false,
+      "id": 5
     }
   ],
   "weapons": [

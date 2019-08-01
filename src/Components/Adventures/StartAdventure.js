@@ -18,6 +18,7 @@ export default class StartAdventureButton extends Component{
             adventureKey: bag.adventureKey,
             adventureVictory: bag.adventureVictory,
             adventureDefeat: bag.adventureDefeat,
+            adventureName: bag.adventureName,
             score: bag.score,
             utilityKey: bag.utilityKey,
             won: true

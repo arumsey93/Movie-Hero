@@ -19,7 +19,8 @@ export default class ItemsList extends Component {
         adventureScore: parseInt(sessionStorage.getItem("adventureScore")),
         adventureKey: sessionStorage.getItem("adventureKey"),
         adventureVictory: sessionStorage.getItem("adventureVictory"),
-        adventureDefeat: sessionStorage.getItem("adventureDefeat")
+        adventureDefeat: sessionStorage.getItem("adventureDefeat"),
+        adventureName: sessionStorage.getItem("adventureName")
     }
 
     componentDidMount() {
@@ -125,6 +126,7 @@ export default class ItemsList extends Component {
                 adventureKey: this.state.adventureKey,
                 adventureVictory: this.state.adventureVictory,
                 adventureDefeat: this.state.adventureDefeat,
+                adventureName: this.state.adventureName,
                 score: this.state.weaponScore + this.state.defenseScore,
                 utilityKey: this.state.utilityKey,
                 won: false
