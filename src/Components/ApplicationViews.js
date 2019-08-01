@@ -345,9 +345,7 @@ class ApplicationViews extends Component {
                 return (
                 <HallOfFame {...props} 
                 bag={this.state.bag}
-                bagId={this.state.bagId}
                 adventures={this.state.adventures}
-                adventure={this.state.adventure}
                 heroes={this.state.heroes}
                 hero={this.state.hero}
                 heroName={this.state.heroName}

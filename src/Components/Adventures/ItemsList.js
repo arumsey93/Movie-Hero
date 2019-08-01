@@ -168,13 +168,13 @@ export default class ItemsList extends Component {
                     <ItemIndex {...this.props} />
                 </div>
                 <div className="startAdventure">
-                    <StartAdventureBtn {...this.props} />
+                    <StartAdventureBtn 
+                    removeWeapon={this.removeWeapon}
+                    removeDefense={this.removeDefense}
+                    removeUtility={this.removeUtility}
+                    {...this.props} />
                 </div>
             </React.Fragment>
         )
     }
 }
-
-
-// compare and add score values
-// compare key values

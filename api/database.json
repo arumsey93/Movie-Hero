@@ -17,6 +17,12 @@
       "password": "password",
       "email": "Jennifer@me.com",
       "id": 3
+    },
+    {
+      "username": "drew",
+      "password": "drew",
+      "email": "drew@hotmail.com",
+      "id": 4
     }
   ],
   "heroes": [
@@ -79,6 +85,12 @@
       "desc": "asdfasdfasdf",
       "userId": 1,
       "id": 10
+    },
+    {
+      "name": "Drew",
+      "desc": "Average Dude",
+      "userId": 4,
+      "id": 11
     }
   ],
   "adventures": [
@@ -246,6 +258,82 @@
       "adventureName": "Sherk",
       "score": 4,
       "utilityKey": "fire",
+      "won": true
+    },
+    {
+      "weapon": "Gun",
+      "defense": "Puppy Dog Eyes",
+      "utility": "Cell Phone",
+      "userId": 4,
+      "heroId": 11,
+      "heroName": "Drew",
+      "timestamp": 1564689393567,
+      "adventureId": 3,
+      "adventureScore": 5,
+      "adventureKey": "phone",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Kidnapped",
+      "score": 3,
+      "utilityKey": "phone",
+      "won": false,
+      "id": 8
+    },
+    {
+      "id": 9,
+      "weapon": "Gun",
+      "defense": "Pepper Spray",
+      "utility": "Cell Phone",
+      "userId": 4,
+      "heroId": 11,
+      "heroName": "Drew",
+      "timestamp": 1564689412359,
+      "adventureId": 3,
+      "adventureScore": 5,
+      "adventureKey": "phone",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Kidnapped",
+      "score": 5,
+      "utilityKey": "phone",
+      "won": true
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Pepper Spray",
+      "utility": "Fire Extinguisher",
+      "userId": 4,
+      "heroId": 11,
+      "heroName": "Drew",
+      "timestamp": 1564689738394,
+      "adventureId": 2,
+      "adventureScore": 3,
+      "adventureKey": "water",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Megalodon",
+      "score": 5,
+      "utilityKey": "fire",
+      "won": false,
+      "id": 10
+    },
+    {
+      "id": 11,
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 4,
+      "heroId": 11,
+      "heroName": "Drew",
+      "timestamp": 1564689838319,
+      "adventureId": 2,
+      "adventureScore": 3,
+      "adventureKey": "water",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Megalodon",
+      "score": 4,
+      "utilityKey": "water",
       "won": true
     }
   ],

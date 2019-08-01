@@ -36,7 +36,7 @@ export default class StartAdventureButton extends Component{
                 return ""
             }
         } else if (bag.score < bag.adventureScore && bag.utilityKey !== bag.adventureKey) {
-            alert("Your items are too weak for this mission, and your utility item is not correct.  Try using different items!", bag.adventureDefeat)
+            alert("Your items are too weak for this mission, and your utility item is not correct.  Try using different items and add them to your bag!", bag.adventureDefeat)
         } else if (bag.utilityKey !== bag.adventureKey) {
             alert("You chose the wrong utility item for this mission, your hero needs the correct item to succeed!", bag.adventureDefeat)
         } else if (bag.score < bag.adventureScore) {
