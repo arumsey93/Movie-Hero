@@ -24,7 +24,7 @@ export default class Dashboard extends Component {
                         <br></br>
                         Create a Hero, or view all your heroes and select one to take on an adventure.
                         <br></br>
-                        Select an Adventure.
+                        Select an Adventure.  Read the adventures description carefully, there may be hints here!
                         <br></br>
                         Select a Weapon, Defense item, and Utility item.
                         <br></br>

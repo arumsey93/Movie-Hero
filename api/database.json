@@ -23,6 +23,12 @@
       "password": "drew",
       "email": "drew@hotmail.com",
       "id": 4
+    },
+    {
+      "username": "JMoney",
+      "password": "money",
+      "email": "jmoney@cash.com",
+      "id": 5
     }
   ],
   "heroes": [
@@ -91,6 +97,12 @@
       "desc": "Average Dude",
       "userId": 4,
       "id": 11
+    },
+    {
+      "name": "Kora",
+      "desc": "Vomits a lot",
+      "userId": 5,
+      "id": 12
     }
   ],
   "adventures": [
@@ -371,6 +383,44 @@
       "adventureDefeat": "YOU FAILED",
       "adventureName": "Megalodon",
       "score": 3,
+      "utilityKey": "water",
+      "won": true
+    },
+    {
+      "weapon": "Spear Gun",
+      "defense": "Puppy Dog Eyes",
+      "utility": "Scuba Suit",
+      "userId": 5,
+      "heroId": 12,
+      "heroName": "Kora",
+      "timestamp": 1564696476426,
+      "adventureId": 2,
+      "adventureScore": 3,
+      "adventureKey": "water",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Megalodon",
+      "score": 2,
+      "utilityKey": "water",
+      "won": false,
+      "id": 14
+    },
+    {
+      "id": 15,
+      "weapon": "Spear Gun",
+      "defense": "Pepper Spray",
+      "utility": "Scuba Suit",
+      "userId": 5,
+      "heroId": 12,
+      "heroName": "Kora",
+      "timestamp": 1564696533555,
+      "adventureId": 2,
+      "adventureScore": 3,
+      "adventureKey": "water",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Megalodon",
+      "score": 4,
       "utilityKey": "water",
       "won": true
     }
