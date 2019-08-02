@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
 import './Create.css'
+import * as firebase from "firebase/app";
+import "firebase/storage";
 
 export default class Create extends Component {
     state = {
         heroName: "",
         heroDesc: "",
         userId: "",
-        photo: null
+        imgUrl: null
     }
+
+    storageRef = firebase.storage().ref("hero-images");
 
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -20,12 +24,18 @@ export default class Create extends Component {
         if (this.heroName || this.heroDesc === "") {
             window.alert("Please Enter a Name or Description")
         } else {
-            const hero = {
+            const ref = this.storageRef.child(this.state.heroName)
+            return ref
+            .put(this.state.imgUrl)
+            .then(data => data.ref.getDownloadURL())
+            .then(imageUrl => {
+                return this.props.addHero({
                 name: this.state.heroName,
                 desc: this.state.heroDesc,
                 userId: +sessionStorage.getItem("userId"),
-            }
-        this.props.addHero(hero)
+                imgUrl: imageUrl
+            })
+        })
         .then(()=> this.props.history.push("/heroes"))
         }
     }
@@ -34,9 +44,26 @@ export default class Create extends Component {
     render () {
         return (
             <React.Fragment>
+            <div className="createYourHeroDiv">
             <h1 className="create-title text-center">Create Your Hero</h1>
             <section className="create-heroes">
                 <form className="heroForm" onSubmit={this.constructNewHero}>
+                    <label htmlFor="heroImg">Hero Image</label>
+                <div className="input-group border-color: grey">
+                    <div className="input-group-prepend">
+                    </div>
+                    <div className="custom-file">
+                        <input
+                        type="file"
+                        className="custom-file-input"
+                        id="inputGroupFile01"
+                        aria-describedby="inputGroupFileAddon01"
+                        onChange={e => this.setState({imgUrl: e.target.files[0]})}
+                        />
+                        <label className="custom-file-label" htmlFor="inputGroupFile01" placeholder="Choose File">
+                        </label>
+                    </div>
+                    </div>
                     <div className="hero-form-group">
                         <label htmlFor="heroName">Hero Name</label>
                         <input
@@ -59,7 +86,7 @@ export default class Create extends Component {
                         placeholder="Hero Description"
                         />
                     </div>
-                    <div className="container">
+                    <div className="heroSubmitContainer">
                         <div className="row">
                             <div className="col text-center">
                             <button
@@ -73,6 +100,7 @@ export default class Create extends Component {
                     </div>
                 </form>
             </section>
+            </div>
             </React.Fragment>
         )
     }

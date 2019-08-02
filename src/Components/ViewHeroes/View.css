@@ -1,0 +1,74 @@
+html {
+    background-image: url("http://paperlief.com/images/stone-wall-texture-wallpaper-2.jpg")
+}
+
+body {
+    background: transparent;
+}
+
+.heroes {
+    background: transparent;
+}
+
+.card-body {
+    background: transparent;
+}
+
+.card {
+    background: #828280;
+    opacity: 0.9;
+    width: 15rem;
+    border-radius: 25px;
+}
+
+.card-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.hero-name {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+.hero-desc {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+.heroImgDiv {
+    display: flex;
+    justify-content: center;
+    opacity: 1.0;
+    background: transparent;
+}
+
+.heroesCards {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background: transparent;
+}
+
+.newHeroBtn {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    background: transparent;
+}
+
+
+.hero-img {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    opacity: 1.0;
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+}

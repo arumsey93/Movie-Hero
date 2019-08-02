@@ -7,11 +7,12 @@ adventureId = this.props.adventure.id
     render () {
         
         return (
-            <div key={this.props.adventure.id} className="card">
-            <div className="card-body">
-                <div className="card-title">
-                    <h5>{this.props.adventure.name}</h5>
-                    <p>{this.props.adventure.description}</p>
+            <div key={this.props.adventure.id} className="ad-card">
+            <div className="ad-card-body">
+                <div className="ad-card-title">
+                    <h5 className="ad-card-name">{this.props.adventure.name}</h5>
+                    <p className="ad-card-desc">{this.props.adventure.description}</p>
+                <div className="ad-btn-div">
                 <button type="button"
                     className="btn btn-warning"
                     id={this.props.adventure.id}
@@ -29,6 +30,7 @@ adventureId = this.props.adventure.id
                     }>
                     Select
                 </button>
+                </div>
                 </div>
             </div>
         </div>

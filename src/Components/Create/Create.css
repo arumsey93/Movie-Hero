@@ -1,0 +1,15 @@
+.createYourHeroDiv {
+    background: #8F8F8C;
+    opacity: 0.9;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.create-title {
+    opacity: 1.0;
+    background: #8F8F8C;
+}
+
+.heroSubmitContainer {
+    margin-top: 15px;
+}

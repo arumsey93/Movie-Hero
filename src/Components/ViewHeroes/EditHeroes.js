@@ -1,14 +1,19 @@
 import React, { Component } from 'react'
 import createHandler from '../APIManager/createhandler'
 import './View.css'
+import * as firebase from "firebase/app";
+import "firebase/storage";
 
 export default class EditHeroForm extends Component {
     state = {
         heroName: "",
         heroDesc: "",
         userId: "",
-        photo: null
+        newImgUrl: null,
+        oldImgUrl: null
     }
+
+    storageRef = firebase.storage().ref("hero-images");
 
     handleFieldChange = evt => {
         const stateToChange = {}
@@ -17,18 +22,36 @@ export default class EditHeroForm extends Component {
     }
 
     updateExistingHero = evt => {
-        evt.preventDefault()
+        evt.preventDefault();
         if (this.heroName || this.heroDesc === "") {
             window.alert("Please Enter a Name or Description")
-        } else {
-            const hero = {
+        } 
+        if (this.state.newImgUrl) {
+            console.log(this.state)
+            const ref = this.storageRef.child(this.state.heroName)
+            return ref
+            .put(this.state.newImgUrl)
+            .then(data => data.ref.getDownloadURL())
+            .then(imageUrl => {
+                return this.props.updateHero({
                 name: this.state.heroName,
                 desc: this.state.heroDesc,
-                userId: +sessionStorage.getItem("userId"),
-                id: this.props.match.params.heroId
-            }
-            this.props.updateHero(hero)
-            .then(() => this.props.history.push("/heroes"))
+                userId: this.state.userId,
+                id: this.props.match.params.heroId,
+                imgUrl: imageUrl
+            })
+        })
+        .then(()=> this.props.history.push("/heroes"))
+        } else {
+            console.log("oldimgurl", this.state)
+            return this.props.updateHero({
+                name: this.state.heroName,
+                desc: this.state.heroDesc,
+                userId: this.state.userId,
+                id: this.props.match.params.heroId,
+                imgUrl: this.state.oldImgUrl
+            })
+            .then(()=> this.props.history.push("/heroes"))
         }
     }
 
@@ -38,7 +61,8 @@ export default class EditHeroForm extends Component {
             this.setState({
                 heroName: hero.name,
                 heroDesc: hero.desc,
-                userId: hero.userId
+                userId: hero.userId,
+                oldImgUrl: hero.imgUrl
             })
         })
     }
@@ -47,6 +71,21 @@ export default class EditHeroForm extends Component {
         return (
             <React.Fragment>
                 <form className="heroForm">
+                <div className="input-group border-color: grey">
+                    <div className="input-group-prepend">
+                    </div>
+                    <div className="custom-file">
+                        <input
+                        type="file"
+                        className="custom-file-input"
+                        id="newImgUrl"
+                        aria-describedby="inputGroupFileAddon01"
+                        onChange={e => this.setState({newImgUrl: e.target.files[0]})}
+                        />
+                        <label className="custom-file-label" htmlFor="inputGroupFile01" placeholder="Choose File">
+                        </label>
+                    </div>
+                    </div>
                     <div className="form-group">
                     <label htmlFor="heroName">Hero Name</label>
                     <input
@@ -81,3 +120,6 @@ export default class EditHeroForm extends Component {
         )
     }
 }
+
+// edit hero without having to edit the photo
+//add the imageUrl URL to text input in edit hero and create hero after image is selected
