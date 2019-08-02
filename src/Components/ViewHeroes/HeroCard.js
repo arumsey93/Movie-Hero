@@ -10,13 +10,15 @@ export default class HeroCard extends Component {
             <div key={this.props.hero.id} className="card">
             <div className="card-body">
                 <div className="card-title">
+                    <div className="heroImgDiv">
                     <img 
                     className="hero-img"
                     src={this.props.hero.imgUrl}
                     alt={this.props.hero.desc}
                     ></img>
-                    <h5>{this.props.hero.name}</h5>
-                    <p>{this.props.hero.desc}</p>
+                    </div>
+                    <h5 className="hero-name">{this.props.hero.name}</h5>
+                    <p className="hero-desc">{this.props.hero.desc}</p>
                     <button
                             type="button"
                             className="btn btn-warning"

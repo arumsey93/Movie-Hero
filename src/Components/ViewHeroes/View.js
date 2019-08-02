@@ -17,14 +17,6 @@ export default class ViewHeroes extends Component {
         return(
             <React.Fragment>
             <section className="heroes">
-            {
-                this.createHero(this.props.heroes).map(hero =>
-                    <HeroCard key={hero.id} 
-                    hero={hero} 
-                    heroFunction={this.props.heroFunction} 
-                    {...this.props} />
-                )
-            }
             <div className="newHeroBtn">
                 <button type="button"
                     className="btn btn-warning"
@@ -33,6 +25,16 @@ export default class ViewHeroes extends Component {
                     }>
                 Create Hero
                 </button>
+            </div>
+            <div className="heroesCards">
+            {
+                this.createHero(this.props.heroes).map(hero =>
+                    <HeroCard key={hero.id} 
+                    hero={hero} 
+                    heroFunction={this.props.heroFunction} 
+                    {...this.props} />
+                )
+            }
             </div>
             </section>
             </React.Fragment>

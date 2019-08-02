@@ -282,7 +282,6 @@ class ApplicationViews extends Component {
             render={props => {
                 return (
                     <EditHeroForm {...props}
-                    heroes={this.state.heroes}
                     updateHero={this.updateHero}
                     />
                 )

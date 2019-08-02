@@ -102,3 +102,51 @@
     justify-content: center;
     margin-top: 25px;
 }
+
+.ad-card {
+        background: #828280;
+        opacity: 0.9;
+        width: 15rem;
+        border-radius: 25px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap
+}
+
+.adventures {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.ad-card-body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: transparent;
+}
+
+.ad-card-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    flex-direction: column;
+}
+
+.ad-card-name {
+    display: flex;
+    justify-content: center;
+}
+
+.ad-card-desc {
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ad-btn-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

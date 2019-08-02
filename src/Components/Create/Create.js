@@ -44,10 +44,12 @@ export default class Create extends Component {
     render () {
         return (
             <React.Fragment>
+            <div className="createYourHeroDiv">
             <h1 className="create-title text-center">Create Your Hero</h1>
             <section className="create-heroes">
                 <form className="heroForm" onSubmit={this.constructNewHero}>
-                <div className="input-group">
+                    <label htmlFor="heroImg">Hero Image</label>
+                <div className="input-group border-color: grey">
                     <div className="input-group-prepend">
                     </div>
                     <div className="custom-file">
@@ -58,8 +60,7 @@ export default class Create extends Component {
                         aria-describedby="inputGroupFileAddon01"
                         onChange={e => this.setState({imgUrl: e.target.files[0]})}
                         />
-                        <label className="custom-file-label" htmlFor="inputGroupFile01">
-                        Choose file
+                        <label className="custom-file-label" htmlFor="inputGroupFile01" placeholder="Choose File">
                         </label>
                     </div>
                     </div>
@@ -85,7 +86,7 @@ export default class Create extends Component {
                         placeholder="Hero Description"
                         />
                     </div>
-                    <div className="container">
+                    <div className="heroSubmitContainer">
                         <div className="row">
                             <div className="col text-center">
                             <button
@@ -99,6 +100,7 @@ export default class Create extends Component {
                     </div>
                 </form>
             </section>
+            </div>
             </React.Fragment>
         )
     }
