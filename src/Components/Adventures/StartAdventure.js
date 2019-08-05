@@ -59,7 +59,7 @@ export default class StartAdventureButton extends Component{
                             if (bag.id === this.props.bagId) {
                                 this.getScore(bag)
                             }else {
-                                return ""
+                                alert("Please Add Items to Your Bag")
                             }
                         })
                     }
