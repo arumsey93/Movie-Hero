@@ -35,9 +35,9 @@ export default class Login extends Component {
 
       render() {
         return (
-          <div>
-            <h1>Login</h1>
-            <form onSubmit={this.handleLogin}>
+          <div className="loginHeaderDiv">
+            <h1 className="loginHeader">Login</h1>
+            <form onSubmit={this.handleLogin} className="loginForm">
               <input
                 onChange={this.handleFieldChange}
                 type="username"
@@ -52,19 +52,22 @@ export default class Login extends Component {
                 placeholder="Password"
                 className="form-control"
               />
-              <button type="submit">Sign in</button>
-              <label htmlFor="Remember Me">
-                <input
-                  id="rememberMe"
-                  name="rememberMe"
-                  value="remember"
-                  type="checkbox"
-                  onClick={() => {
-                    this.setState({ rememberMe: true });
-                  }}
-                />
-                Remember Me
-              </label>
+              <button type="submit" className="btn btn-warning">Sign in</button>
+              <div className="rememberMeDiv">
+                <label htmlFor="Remember Me">
+                  <input
+                    id="rememberMe"
+                    name="rememberMe"
+                    value="remember"
+                    type="checkbox"
+                    className="rememberMe"
+                    onClick={() => {
+                      this.setState({ rememberMe: true });
+                    }}
+                  />
+                  Remember Me
+                </label>
+              </div>
             </form>
           </div>
         );

@@ -10,6 +10,13 @@ adventureId = this.props.adventure.id
             <div key={this.props.adventure.id} className="ad-card">
             <div className="ad-card-body">
                 <div className="ad-card-title">
+                    <div className="ad-img-div">
+                        <img
+                        className="ad-img"
+                        src={this.props.adventure.img}
+                        alt={this.props.adventure.description}>
+                        </img>
+                    </div>
                     <h5 className="ad-card-name">{this.props.adventure.name}</h5>
                     <p className="ad-card-desc">{this.props.adventure.description}</p>
                 <div className="ad-btn-div">

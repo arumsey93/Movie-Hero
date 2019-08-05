@@ -12,6 +12,7 @@ export default class StartAdventureButton extends Component{
             userId: bag.userId,
             heroId: bag.heroId,
             heroName: bag.heroName,
+            heroImg: bag.heroImg,
             timestamp: bag.timestamp,
             adventureId: bag.adventureId,
             adventureScore: bag.adventureScore,

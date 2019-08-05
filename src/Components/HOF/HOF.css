@@ -1,0 +1,61 @@
+.HOFHeader {
+    display: flex;
+    justify-content: center;
+    background: #828280;
+    opacity: 0.9;
+}
+
+.HOFChampions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.HOF-card {
+    display: flex;
+    justify-content: space-evenly;
+    background: #828280;
+    opacity: 0.9;
+    width: 15rem;
+    border-radius: 25px;
+    margin-top: 25px;
+}
+
+.HOF-card-title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: transparent;
+}
+
+.hof-img {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    opacity: 1.0;
+    border-radius: 25px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+.HOFheroImgDiv {
+    display: flex;
+    justify-content: center;
+    opacity: 1.0;
+    background: transparent;
+}
+
+.HOF-hero-name {
+    display: flex;
+    justify-content: center;
+}
+
+.card-box {
+    display: flex;
+    justify-content: center;
+}
+
+.HOF-hero-desc {
+    display: flex;
+    justify-content: center;
+}

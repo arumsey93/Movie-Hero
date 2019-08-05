@@ -16,6 +16,7 @@ export default class ItemsList extends Component {
         showMenu: false,
         heroId: parseInt(sessionStorage.getItem("heroId")),
         heroName: sessionStorage.getItem("heroName"),
+        heroImg: sessionStorage.getItem("heroImg"),
         adventureScore: parseInt(sessionStorage.getItem("adventureScore")),
         adventureKey: sessionStorage.getItem("adventureKey"),
         adventureVictory: sessionStorage.getItem("adventureVictory"),
@@ -120,6 +121,7 @@ export default class ItemsList extends Component {
                 userId: +sessionStorage.getItem("userId"),
                 heroId: this.state.heroId,
                 heroName: this.state.heroName,
+                heroImg: this.state.heroImg,
                 timestamp: Date.now(),
                 adventureId: parseInt(this.props.match.params.adventureId),
                 adventureScore: this.state.adventureScore,
@@ -139,40 +141,42 @@ export default class ItemsList extends Component {
     render () {
         return (
             <React.Fragment>
-                <div className="ItemsDiv">
-                    <Items 
-                    weaponHandleFieldChange={this.weaponHandleFieldChange}
-                    defenseHandleFieldChange={this.defenseHandleFieldChange}
-                    utilityHandleFieldChange={this.utilityHandleFieldChange}
-                    toggleMenu={this.toggleMenu}
-                    menuVis={this.menuVis}
-                    handleFieldChange={this.handleFieldChange}
-                    handleClickChange={this.handleClickChange}
-                    handleDefenseChange={this.handleDefenseChange}
-                    handleUtilityChange={this.handleUtilityChange}
-                    removeWeapon={this.removeWeapon}
-                    removeDefense={this.removeDefense}
-                    removeUtility={this.removeUtility}
-                    updateItems={this.updateItems}
-                    {...this.props} 
-                    selectedOption={this.state.selectedOption}
-                    selectedDefense={this.state.selectedDefense}
-                    selectedUtility={this.state.selectedUtility}
-                    showMenu={this.state.showMenu}
-                    weapon={this.state.weapon}
-                    defense={this.state.defense}
-                    utility={this.state.utility}
-                    />
-                </div>
-                <div className="ItemIndexDiv">
-                    <ItemIndex {...this.props} />
-                </div>
-                <div className="startAdventure">
-                    <StartAdventureBtn 
-                    removeWeapon={this.removeWeapon}
-                    removeDefense={this.removeDefense}
-                    removeUtility={this.removeUtility}
-                    {...this.props} />
+                <div className="allItemsDiv">
+                    <div className="ItemsDiv">
+                        <Items 
+                        weaponHandleFieldChange={this.weaponHandleFieldChange}
+                        defenseHandleFieldChange={this.defenseHandleFieldChange}
+                        utilityHandleFieldChange={this.utilityHandleFieldChange}
+                        toggleMenu={this.toggleMenu}
+                        menuVis={this.menuVis}
+                        handleFieldChange={this.handleFieldChange}
+                        handleClickChange={this.handleClickChange}
+                        handleDefenseChange={this.handleDefenseChange}
+                        handleUtilityChange={this.handleUtilityChange}
+                        removeWeapon={this.removeWeapon}
+                        removeDefense={this.removeDefense}
+                        removeUtility={this.removeUtility}
+                        updateItems={this.updateItems}
+                        {...this.props} 
+                        selectedOption={this.state.selectedOption}
+                        selectedDefense={this.state.selectedDefense}
+                        selectedUtility={this.state.selectedUtility}
+                        showMenu={this.state.showMenu}
+                        weapon={this.state.weapon}
+                        defense={this.state.defense}
+                        utility={this.state.utility}
+                        />
+                    </div>
+                    <div className="ItemIndexDiv">
+                        <ItemIndex {...this.props} />
+                    </div>
+                    <div className="startAdventure">
+                        <StartAdventureBtn 
+                        removeWeapon={this.removeWeapon}
+                        removeDefense={this.removeDefense}
+                        removeUtility={this.removeUtility}
+                        {...this.props} />
+                    </div>
                 </div>
             </React.Fragment>
         )

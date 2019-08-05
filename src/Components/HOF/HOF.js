@@ -7,7 +7,7 @@ export default class HallOfFame extends Component {
         return (
             <section>
                 <div className="hallOfFameHeaderDiv">
-                    <h4 className="HOFHeader">Hall of Fame</h4>
+                    <h1 className="HOFHeader">Hall of Fame</h1>
                 </div>
                 <div className="HOFChampions">
                     {

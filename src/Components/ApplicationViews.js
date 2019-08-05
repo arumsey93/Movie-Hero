@@ -1,5 +1,6 @@
 import { Route, withRouter, Redirect } from "react-router-dom";
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './login/login';
 import Welcome from './Welcome/Welcome';
 import Register from './register/register'
@@ -36,6 +37,7 @@ class ApplicationViews extends Component {
         adventureName: "",
         hero: "",
         heroName: "",
+        heroImg: "",
         weapon: "",
         def: "",
         util: "",
@@ -76,10 +78,11 @@ class ApplicationViews extends Component {
     })
 }
 
-    heroFunction = (id, name) => 
+    heroFunction = (id, name, pic) => 
     this.setState({
         hero: id,
-        heroName: name
+        heroName: name,
+        heroImg: pic
     })
 
     weaponFunction = id => 
@@ -324,6 +327,7 @@ class ApplicationViews extends Component {
                         heroes={this.state.heroes}
                         hero={this.state.hero}
                         heroName={this.state.heroName}
+                        heroImg={this.state.heroImg}
                         adventures={this.state.adventures}
                         adventureScore={this.state.adventureScore}
                         adventureKey={this.state.adventureKey}
@@ -349,6 +353,7 @@ class ApplicationViews extends Component {
                 heroes={this.state.heroes}
                 hero={this.state.hero}
                 heroName={this.state.heroName}
+                heroImg={this.state.heroImg}
                 />
                 )
             }}

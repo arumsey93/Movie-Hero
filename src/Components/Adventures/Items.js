@@ -16,17 +16,20 @@ export default class Items extends Component {
                             </div>
                             <select
                             value={this.props.selectedOption}
-                            className="weaponsSelect"
+                            className="weaponsSelect btn btn-warning"
                             id="weapon"
                             onChange={this.props.weaponHandleFieldChange}
                             >
-                            <option value="">Weapons:</option>
+                            <option value=""
+                            className="btn btn-warning"
+                            >Weapons:</option>
                             {
                             this.props.weapons.map(weapon => 
                                 <option 
                                 required 
                                 key={weapon.id}
                                 id={weapon.id}
+                                className="btn btn-warning"
                                 value={weapon.name}>
                                 {weapon.name}
                                 </option>
@@ -40,7 +43,7 @@ export default class Items extends Component {
                             </div>
                             <select
                             value={this.props.selectedDefense}
-                            className="defenseSelect"
+                            className="defenseSelect btn btn-warning"
                             id="defense"
                             onChange={this.props.defenseHandleFieldChange}
                             >
@@ -51,6 +54,7 @@ export default class Items extends Component {
                                 required
                                 key={defense.id}
                                 id={defense.id}
+                                className="btn btn-warning"
                                 value={defense.name}>
                                 {defense.name}
                                 </option>
@@ -64,7 +68,7 @@ export default class Items extends Component {
                             </div>
                             <select
                             value={this.props.selectedUtility}
-                            className="utilitySelect"
+                            className="utilitySelect btn btn-warning"
                             id="utility"
                             onChange={this.props.utilityHandleFieldChange}
                             >

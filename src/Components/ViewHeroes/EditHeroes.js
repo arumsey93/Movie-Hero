@@ -71,50 +71,56 @@ export default class EditHeroForm extends Component {
         return (
             <React.Fragment>
                 <form className="heroForm">
-                <div className="input-group border-color: grey">
-                    <div className="input-group-prepend">
+                    <div className="heroFormHeader">
+                        <h1 className="editHeroHeader">Edit Your Hero</h1>
                     </div>
-                    <div className="custom-file">
+                    <label htmlFor="heroImg">Hero Image</label>
+                    <div className="input-group border-color: grey">
+                        <div className="input-group-prepend">
+                        </div>
+                        <div className="custom-file">
+                            <input
+                            type="file"
+                            className="custom-file-input"
+                            id="newImgUrl"
+                            aria-describedby="inputGroupFileAddon01"
+                            onChange={e => this.setState({newImgUrl: e.target.files[0]})}
+                            />
+                            <label className="custom-file-label" htmlFor="inputGroupFile01" placeholder="Choose File">
+                            </label>
+                        </div>
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="heroName">Hero Name</label>
                         <input
-                        type="file"
-                        className="custom-file-input"
-                        id="newImgUrl"
-                        aria-describedby="inputGroupFileAddon01"
-                        onChange={e => this.setState({newImgUrl: e.target.files[0]})}
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="heroName"
+                            value = {this.state.heroName}
                         />
-                        <label className="custom-file-label" htmlFor="inputGroupFile01" placeholder="Choose File">
-                        </label>
-                    </div>
                     </div>
                     <div className="form-group">
-                    <label htmlFor="heroName">Hero Name</label>
-                    <input
-                        type="text"
-                        required
-                        className="form-control"
-                        onChange={this.handleFieldChange}
-                        id="heroName"
-                        value = {this.state.heroName}
-                    />
+                        <label htmlFor="heroDesc">Hero Description</label>
+                        <input
+                            type="text"
+                            required
+                            className="form-control"
+                            onChange={this.handleFieldChange}
+                            id="heroDesc"
+                            value = {this.state.heroDesc}
+                        />
                     </div>
-                    <div className="form-group">
-                    <label htmlFor="heroDesc">Hero Description</label>
-                    <input
-                        type="text"
-                        required
-                        className="form-control"
-                        onChange={this.handleFieldChange}
-                        id="heroDesc"
-                        value = {this.state.heroDesc}
-                    />
+                        <div className="editHeroSubmitBtn">
+                        <button
+                        type="submit"
+                        onClick={this.updateExistingHero}
+                        className="btn btn-warning"
+                        >
+                        Submit
+                        </button>
                     </div>
-                    <button
-                    type="submit"
-                    onClick={this.updateExistingHero}
-                    className="btn btn-warning"
-                    >
-                    Submit
-                    </button>
                 </form>
         </React.Fragment>
         )

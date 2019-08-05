@@ -45,6 +45,13 @@
       "userId": 1,
       "imgUrl": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FAlex?alt=media&token=aecbb383-1934-46a8-9c87-b44061d17477",
       "id": 2
+    },
+    {
+      "name": "Doge",
+      "desc": "Doge",
+      "userId": 1,
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FDoge?alt=media&token=9c7828d0-e2cb-4a6c-bfa1-b394fd25ee26",
+      "id": 3
     }
   ],
   "adventures": [
@@ -55,16 +62,18 @@
       "key": "fire",
       "id": 1,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://i.redd.it/p6sb79tpnih11.jpg"
     },
     {
       "name": "Megalodon",
-      "description": "A giant shark is attacking your underwater science lab, your team may have inadvertently let it out.  Stop the shark, and save the innocent bystanders in its' path.",
+      "description": "A giant shark is attacking your underwater science lab, your team may have inadvertently let it out.  Stop the shark, and save the innocent bystanders in its path.",
       "score": 3,
       "key": "water",
       "id": 2,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://www.nhm.ac.uk/content/dam/nhmwww/discover/megalodon/megalodon_warpaint_shutterstock-full-width.jpg"
     },
     {
       "name": "Kidnapped",
@@ -73,7 +82,8 @@
       "key": "phone",
       "id": 3,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://www.postard.com/wp-content/uploads/2019/04/Taken-Review.jpg.webp"
     },
     {
       "name": "29 Days Later",
@@ -82,10 +92,52 @@
       "key": "cardio",
       "id": 4,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://vignette.wikia.nocookie.net/28dayslater/images/8/8d/WeeksHordeofInfected.jpg/revision/latest?cb=20111020192720"
     }
   ],
-  "bag": [],
+  "bag": [
+    {
+      "id": 2,
+      "weapon": "Sword",
+      "defense": "Shield",
+      "utility": "Fire Extinguisher",
+      "userId": 1,
+      "heroId": 2,
+      "heroName": "Alex",
+      "heroImg": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FAlex?alt=media&token=aecbb383-1934-46a8-9c87-b44061d17477",
+      "timestamp": 1565015904398,
+      "adventureId": 1,
+      "adventureScore": 3,
+      "adventureKey": "fire",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Sherk",
+      "score": 3,
+      "utilityKey": "fire",
+      "won": true
+    },
+    {
+      "id": 3,
+      "weapon": "Kung Fu Abilities",
+      "defense": "Pepper Spray",
+      "utility": "Cell Phone",
+      "userId": 1,
+      "heroId": 3,
+      "heroName": "Doge",
+      "heroImg": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FDoge?alt=media&token=9c7828d0-e2cb-4a6c-bfa1-b394fd25ee26",
+      "timestamp": 1565026351827,
+      "adventureId": 3,
+      "adventureScore": 5,
+      "adventureKey": "phone",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Kidnapped",
+      "score": 5,
+      "utilityKey": "phone",
+      "won": true
+    }
+  ],
   "weapons": [
     {
       "name": "Sword",

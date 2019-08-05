@@ -1,0 +1,24 @@
+.registerDiv {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #828280;
+    opacity: 0.9;
+    background-clip: padding-box;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-top: 300px;
+}
+
+.registerHeader {
+    text-align: center;
+}
+
+.registerForm {
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-bottom: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between
+}

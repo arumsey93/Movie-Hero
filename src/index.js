@@ -5,6 +5,7 @@ import MovieHero from './Components/MovieHero'
 import './index.css';
 import * as firebase from 'firebase/app';
 import { firebaseConfig } from '../src/config/firebase';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 firebase.initializeApp(firebaseConfig);
 
