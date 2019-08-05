@@ -1,5 +1,6 @@
 import { Route, withRouter, Redirect } from "react-router-dom";
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './login/login';
 import Welcome from './Welcome/Welcome';
 import Register from './register/register'

@@ -1,14 +1,33 @@
 import React, { Component } from 'react'
 import './Dashboard.css'
+import torch from "./torch.gif"
 
 export default class Dashboard extends Component {
     render () {
         return (
             <section>
                 <div className="dashHeaderDiv">
-                <div className="dashboardHeader">
-                    <h1 className="dashTitle">Movie Hero</h1>
-                    <h4 className="dashWelcome">Welcome Adventurer!</h4>
+                    <div className="dashCol">
+                        <div className="dashboardHeader">
+                            <div className="torchTwo">
+                                <img
+                                src={torch}
+                                alt={torch}
+                                ></img>
+                            </div>
+                            <div className="dashTitleAndWelcomeDiv">
+                                <h1 className="dashTitle">Movie Hero</h1>
+                                    <div className="dashWelcomeDiv">
+                                        <h4 className="dashWelcome">Welcome Adventurer!</h4>
+                                    </div>
+                            </div>
+                        <div className="torchOne">
+                            <img
+                            src={torch}
+                            alt={torch}
+                            ></img>
+                        </div>
+                    </div>
                 </div>
                 <div className="rulesDiv">
                     <div className="rulesHeaderDiv">

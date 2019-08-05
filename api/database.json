@@ -116,6 +116,26 @@
       "score": 3,
       "utilityKey": "fire",
       "won": true
+    },
+    {
+      "id": 3,
+      "weapon": "Kung Fu Abilities",
+      "defense": "Pepper Spray",
+      "utility": "Cell Phone",
+      "userId": 1,
+      "heroId": 3,
+      "heroName": "Doge",
+      "heroImg": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FDoge?alt=media&token=9c7828d0-e2cb-4a6c-bfa1-b394fd25ee26",
+      "timestamp": 1565026351827,
+      "adventureId": 3,
+      "adventureScore": 5,
+      "adventureKey": "phone",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Kidnapped",
+      "score": 5,
+      "utilityKey": "phone",
+      "won": true
     }
   ],
   "weapons": [

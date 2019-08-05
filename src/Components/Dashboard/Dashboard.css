@@ -1,5 +1,30 @@
 .dashboardHeader {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.torchTwo {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    width: 100px;
+    height: 100px;
+    padding-right:10px;
+}
+
+.torchOne {
+    display:flex;
+    justify-content: right;
+    flex-direction: row;
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.dashCol {
+    display: flex;
     flex-direction: column;
 }
 
@@ -14,15 +39,32 @@
     
 }
 
+.dashTitleAndWelcomeDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding-left: 25px; */
+    margin-left: 25px;
+}
+
 .dashTitle {
     display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dashWelcomeDiv {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .dashWelcome {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
+
 
 .rulesDiv {
     display: flex;
