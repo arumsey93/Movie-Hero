@@ -36,7 +36,7 @@
     background-clip: padding-box;
     margin-left: 100px;
     margin-right: 100px;
-    
+    border-radius: 25px
 }
 
 .dashTitleAndWelcomeDiv {
@@ -122,6 +122,7 @@
     background-clip: padding-box;
     margin-left: 100px;
     margin-right: 100px;
+    border-radius: 25px
 }
 
 .availableAdventuresHeaderDiv {

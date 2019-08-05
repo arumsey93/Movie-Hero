@@ -15,7 +15,7 @@ class NavBar extends Component {
 
     render () {
         return (
-            <nav className="navbar justify-content-center navbar-light light-blue bg-dark flex-md-nowrap p-0 shadow">
+            <nav className="navbar justify-content-center navbar-dark light-blue bg-dark flex-md-nowrap p-0 shadow">
             <ul className="nav nav-pills nav-fill">
                 <li className="nav-item">
                     <Link className="nav-link" to="/">Dashboard</Link>
