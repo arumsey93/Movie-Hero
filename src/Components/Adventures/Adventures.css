@@ -79,7 +79,10 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    border: 1px solid black
+    margin-right: 210px;
+    margin-left: 210px;
+    border: 1px solid black;
+    padding-top: 15px;
 }
 
 .defenseIndexHeader {
@@ -149,4 +152,9 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.allItemsDiv {
+    background: #828280;
+    opacity: 0.9;
 }

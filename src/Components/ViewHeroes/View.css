@@ -8,6 +8,7 @@ body {
 
 .heroes {
     background: transparent;
+    margin-top: 25px;
 }
 
 .card-body {
@@ -71,4 +72,23 @@ body {
     width: 200px;
     height: 200px;
     margin-bottom: 15px;
+}
+
+.editHeroHeader {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.heroForm {
+    background: #828280;
+    opacity: 0.9;
+    margin-top: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.editHeroSubmitBtn {
+    display: flex;
+    justify-content: center;
 }

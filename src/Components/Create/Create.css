@@ -1,13 +1,14 @@
 .createYourHeroDiv {
-    background: #8F8F8C;
+    background: #828280;
     opacity: 0.9;
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 25px
 }
 
 .create-title {
     opacity: 1.0;
-    background: #8F8F8C;
+    background: #828280;
 }
 
 .heroSubmitContainer {

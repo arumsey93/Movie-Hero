@@ -3,6 +3,12 @@
     flex-direction: column;
 }
 
+.dashHeaderDiv {
+    background: #828280;
+    opacity: 0.9;
+    margin-top: 25px;
+}
+
 .dashTitle {
     display: flex;
     justify-content: center;
@@ -61,6 +67,11 @@
 .viewHeroDashBtn {
     display: flex;
     padding-left: 80px;
+}
+
+.availableAdventuresDiv {
+    background: #828280;
+    opacity: 0.9;
 }
 
 .availableAdventuresHeaderDiv {
