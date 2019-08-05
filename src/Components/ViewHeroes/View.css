@@ -86,9 +86,13 @@ body {
     margin-top: 25px;
     padding-left: 50px;
     padding-right: 50px;
+    background-clip: padding-box;
+    margin-left: 25px;
+    margin-right: 25px;
 }
 
 .editHeroSubmitBtn {
     display: flex;
     justify-content: center;
+    padding-bottom:15px;
 }

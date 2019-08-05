@@ -62,16 +62,18 @@
       "key": "fire",
       "id": 1,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://i.redd.it/p6sb79tpnih11.jpg"
     },
     {
       "name": "Megalodon",
-      "description": "A giant shark is attacking your underwater science lab, your team may have inadvertently let it out.  Stop the shark, and save the innocent bystanders in its' path.",
+      "description": "A giant shark is attacking your underwater science lab, your team may have inadvertently let it out.  Stop the shark, and save the innocent bystanders in its path.",
       "score": 3,
       "key": "water",
       "id": 2,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://www.nhm.ac.uk/content/dam/nhmwww/discover/megalodon/megalodon_warpaint_shutterstock-full-width.jpg"
     },
     {
       "name": "Kidnapped",
@@ -80,7 +82,8 @@
       "key": "phone",
       "id": 3,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://www.postard.com/wp-content/uploads/2019/04/Taken-Review.jpg.webp"
     },
     {
       "name": "29 Days Later",
@@ -89,7 +92,8 @@
       "key": "cardio",
       "id": 4,
       "victory": "You passed the mission, now you can view your hero in the Hall of Fame!",
-      "defeat": "YOU FAILED"
+      "defeat": "YOU FAILED",
+      "img": "https://vignette.wikia.nocookie.net/28dayslater/images/8/8d/WeeksHordeofInfected.jpg/revision/latest?cb=20111020192720"
     }
   ],
   "bag": [

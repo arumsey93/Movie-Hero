@@ -54,9 +54,9 @@ export default class Register extends Component {
     };
     render() {
       return (
-        <div>
-          <h1>Register</h1>
-          <form onSubmit={this.handleRegister}>
+        <div className="registerDiv">
+          <h1 className="registerHeader">Register</h1>
+          <form onSubmit={this.handleRegister} className="registerForm">
             <input
               onChange={this.handleFieldChange}
               type="text"
@@ -78,7 +78,7 @@ export default class Register extends Component {
               id="password"
               className="form-control"
             />
-            <button type="submit">Register</button>
+            <button type="submit" className="btn btn-warning">Register</button>
           </form>
         </div>
       );
