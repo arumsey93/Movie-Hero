@@ -8,7 +8,6 @@
 .HOFChampions {
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 .HOF-card {
@@ -19,7 +18,6 @@
     width: 15rem;
     border-radius: 25px;
     margin-top: 25px;
-    flex-wrap: wrap;
 }
 
 .HOF-card-title {
