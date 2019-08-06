@@ -29,6 +29,12 @@
       "password": "money",
       "email": "jmoney@cash.com",
       "id": 5
+    },
+    {
+      "username": "fred",
+      "password": "fred",
+      "email": "f@f.com",
+      "id": 6
     }
   ],
   "heroes": [
@@ -87,6 +93,13 @@
       "userId": 1,
       "imgUrl": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FBruce%20Wayne?alt=media&token=f9fc8ccf-ee16-493d-ab1c-dbe98a3714f8",
       "id": 8
+    },
+    {
+      "name": "Puggo",
+      "desc": "Poops a lot",
+      "userId": 6,
+      "id": 9,
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FPuggo?alt=media&token=75ba331a-534b-4a36-b973-4b6106d0179d"
     }
   ],
   "adventures": [
@@ -310,6 +323,26 @@
       "adventureName": "29 Days Later",
       "score": 5,
       "utilityKey": "cardio",
+      "won": true
+    },
+    {
+      "id": 11,
+      "weapon": "Spear Gun",
+      "defense": "Pepper Spray",
+      "utility": "Fire Extinguisher",
+      "userId": 6,
+      "heroId": 9,
+      "heroName": "Puggo",
+      "heroImg": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FPuggo?alt=media&token=75ba331a-534b-4a36-b973-4b6106d0179d",
+      "timestamp": 1565099741633,
+      "adventureId": 1,
+      "adventureScore": 3,
+      "adventureKey": "fire",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Sherk",
+      "score": 4,
+      "utilityKey": "fire",
       "won": true
     }
   ],
