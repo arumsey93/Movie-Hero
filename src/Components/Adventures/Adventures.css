@@ -179,4 +179,6 @@
     background-clip: padding-box;
     margin-left: 50px;
     margin-right: 50px;
+    border-radius: 25px;
+    padding-bottom: 15px;
 }

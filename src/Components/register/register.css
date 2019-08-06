@@ -8,6 +8,8 @@
     margin-left: 400px;
     margin-right: 400px;
     margin-top: 300px;
+    border: 1px solid black;
+    border-radius: 25px
 }
 
 .registerHeader {

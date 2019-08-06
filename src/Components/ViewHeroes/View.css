@@ -53,6 +53,7 @@ body {
     justify-content: space-evenly;
     flex-direction: row;
     background: transparent;
+    flex-wrap: wrap;
 }
 
 .newHeroBtn {
@@ -89,6 +90,7 @@ body {
     background-clip: padding-box;
     margin-left: 25px;
     margin-right: 25px;
+    border-radius: 25px
 }
 
 .editHeroSubmitBtn {
