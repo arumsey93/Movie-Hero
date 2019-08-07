@@ -53,21 +53,6 @@ export default class Login extends Component {
                 className="form-control"
               />
               <button type="submit" className="btn btn-warning">Sign in</button>
-              <div className="rememberMeDiv">
-                <label htmlFor="Remember Me">
-                  <input
-                    id="rememberMe"
-                    name="rememberMe"
-                    value="remember"
-                    type="checkbox"
-                    className="rememberMe"
-                    onClick={() => {
-                      this.setState({ rememberMe: true });
-                    }}
-                  />
-                  Remember Me
-                </label>
-              </div>
             </form>
           </div>
         );
