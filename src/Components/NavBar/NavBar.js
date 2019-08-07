@@ -9,7 +9,7 @@ class NavBar extends Component {
 
     logOut = () => {
         sessionStorage.clear()
-        this.props.history.push("welcome/login")
+        this.props.history.push("/welcome")
     }
     
 

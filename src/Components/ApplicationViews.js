@@ -283,11 +283,15 @@ class ApplicationViews extends Component {
             exact
             path="/heroes/:heroId(\d+)/edit"
             render={props => {
-                return (
-                    <EditHeroForm {...props}
-                    updateHero={this.updateHero}
-                    />
-                )
+                if(this.isAuthenticated()){
+                    return (
+                        <EditHeroForm {...props}
+                        updateHero={this.updateHero}
+                        />
+                    )
+                } else {
+                    return <Redirect to="/welcome" />
+                }
             }}
             />
             <Route
@@ -339,6 +343,8 @@ class ApplicationViews extends Component {
                         bag={this.state.bag}
                         />
                     )
+                } else {
+                    return <Redirect to="/welcome" />
                 }
             }}
             />
@@ -346,16 +352,20 @@ class ApplicationViews extends Component {
             exact
             path="/hallOfFame"
             render={props => {
-                return (
-                <HallOfFame {...props} 
-                bag={this.state.bag}
-                adventures={this.state.adventures}
-                heroes={this.state.heroes}
-                hero={this.state.hero}
-                heroName={this.state.heroName}
-                heroImg={this.state.heroImg}
+                if(this.isAuthenticated()){
+                    return (
+                    <HallOfFame {...props} 
+                    bag={this.state.bag}
+                    adventures={this.state.adventures}
+                    heroes={this.state.heroes}
+                    hero={this.state.hero}
+                    heroName={this.state.heroName}
+                    heroImg={this.state.heroImg}
                 />
                 )
+                } else {
+                    return <Redirect to="/welcome" />
+                }
             }}
             />
             </React.Fragment>

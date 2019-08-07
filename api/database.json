@@ -344,6 +344,26 @@
       "score": 4,
       "utilityKey": "fire",
       "won": true
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Cell Phone",
+      "userId": 1,
+      "heroId": 2,
+      "heroName": "Alex",
+      "heroImg": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FAlex?alt=media&token=aecbb383-1934-46a8-9c87-b44061d17477",
+      "timestamp": 1565128203116,
+      "adventureId": 3,
+      "adventureScore": 5,
+      "adventureKey": "phone",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Kidnapped",
+      "score": 4,
+      "utilityKey": "phone",
+      "won": false,
+      "id": 12
     }
   ],
   "weapons": [
