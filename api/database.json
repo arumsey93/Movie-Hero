@@ -100,6 +100,13 @@
       "userId": 6,
       "id": 9,
       "imgUrl": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FPuggo?alt=media&token=75ba331a-534b-4a36-b973-4b6106d0179d"
+    },
+    {
+      "name": "Kora",
+      "desc": "Good Girl",
+      "userId": 1,
+      "imgUrl": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FKora?alt=media&token=2827ec3d-1868-4472-a440-a305e5b0e4f1",
+      "id": 10
     }
   ],
   "adventures": [
@@ -364,6 +371,46 @@
       "utilityKey": "phone",
       "won": false,
       "id": 12
+    },
+    {
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Cell Phone",
+      "userId": 1,
+      "heroId": 10,
+      "heroName": "Kora",
+      "heroImg": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FKora?alt=media&token=2827ec3d-1868-4472-a440-a305e5b0e4f1",
+      "timestamp": 1565364426954,
+      "adventureId": 2,
+      "adventureScore": 3,
+      "adventureKey": "water",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Megalodon",
+      "score": 4,
+      "utilityKey": "phone",
+      "won": false,
+      "id": 13
+    },
+    {
+      "id": 14,
+      "weapon": "Kung Fu Abilities",
+      "defense": "Taser",
+      "utility": "Scuba Suit",
+      "userId": 1,
+      "heroId": 10,
+      "heroName": "Kora",
+      "heroImg": "https://firebasestorage.googleapis.com/v0/b/movie-hero-3573a.appspot.com/o/hero-images%2FKora?alt=media&token=2827ec3d-1868-4472-a440-a305e5b0e4f1",
+      "timestamp": 1565364440744,
+      "adventureId": 2,
+      "adventureScore": 3,
+      "adventureKey": "water",
+      "adventureVictory": "You passed the mission, now you can view your hero in the Hall of Fame!",
+      "adventureDefeat": "YOU FAILED",
+      "adventureName": "Megalodon",
+      "score": 4,
+      "utilityKey": "water",
+      "won": true
     }
   ],
   "weapons": [
