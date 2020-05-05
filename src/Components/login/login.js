@@ -29,7 +29,7 @@ export default class Login extends Component {
           sessionStorage.setItem("userId",findUser.id)
           this.props.history.push("/")
         } else {
-          alert("username or password was incorect. please enter the right password or username");
+          alert("username or password was incorrect. please enter the right password or username");
         }
       };
 
