@@ -1,4 +1,4 @@
-const remoteURL = "https://movie-hero.dev"
+const remoteURL = "https://localhost:5002"
 
 export default Object.create(null, {
    get: {
