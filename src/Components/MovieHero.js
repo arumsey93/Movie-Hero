@@ -15,10 +15,10 @@ class MovieHero extends Component {
         // this.setState({userResults: []})
         if (event.key === "Enter") {
             let input = document.getElementById("searchBar").value
-            fetch (`http://localhost:5002/users?username_like=${input}`)
+            fetch (`https://movie-hero-server.herokuapp.com/users?username_like=${input}`)
             .then(r => r.json())
             .then(username => newState.userResults = username)
-            .then(() => fetch (`http://localhost:5002/users?email_like=${input}`))
+            .then(() => fetch (`https://movie-hero-server.herokuapp.com/users?email_like=${input}`))
             .then(r => r.json())
             .then(email => newState.emailResults = email)
             .then(() => {

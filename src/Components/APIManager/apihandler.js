@@ -1,4 +1,4 @@
-const remoteURL = "https://localhost:5002"
+const remoteURL = "https://movie-hero-server.herokuapp.com"
 
 export default Object.create(null, {
    get: {
